@@ -1,0 +1,355 @@
+openapi: 3.0.1
+info:
+  title: ExampleApp API
+  version: "1.0.0"
+paths:
+  /api/beneficiaryinfos:
+    get:
+      summary: List Beneficiaryinfo
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create Beneficiaryinfo
+      responses:
+        '201':
+          description: Created
+  /api/beneficiaryinfos/{id}:
+    get:
+      summary: Get Beneficiaryinfo by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update Beneficiaryinfo
+    delete:
+      summary: Delete Beneficiaryinfo
+  /api/companyinfos:
+    get:
+      summary: List Companyinfo
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create Companyinfo
+      responses:
+        '201':
+          description: Created
+  /api/companyinfos/{id}:
+    get:
+      summary: Get Companyinfo by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update Companyinfo
+    delete:
+      summary: Delete Companyinfo
+  /api/payments:
+    get:
+      summary: List Payment
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create Payment
+      responses:
+        '201':
+          description: Created
+  /api/payments/{id}:
+    get:
+      summary: Get Payment by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update Payment
+    delete:
+      summary: Delete Payment
+  /api/paymentapplicationquotes:
+    get:
+      summary: List Paymentapplicationquote
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create Paymentapplicationquote
+      responses:
+        '201':
+          description: Created
+  /api/paymentapplicationquotes/{id}:
+    get:
+      summary: Get Paymentapplicationquote by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update Paymentapplicationquote
+    delete:
+      summary: Delete Paymentapplicationquote
+  /api/paymentapplicationquotefeedetails:
+    get:
+      summary: List Paymentapplicationquotefeedetail
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create Paymentapplicationquotefeedetail
+      responses:
+        '201':
+          description: Created
+  /api/paymentapplicationquotefeedetails/{id}:
+    get:
+      summary: Get Paymentapplicationquotefeedetail by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update Paymentapplicationquotefeedetail
+    delete:
+      summary: Delete Paymentapplicationquotefeedetail
+  /api/paymentapplicationtransactions:
+    get:
+      summary: List Paymentapplicationtransaction
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create Paymentapplicationtransaction
+      responses:
+        '201':
+          description: Created
+  /api/paymentapplicationtransactions/{id}:
+    get:
+      summary: Get Paymentapplicationtransaction by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update Paymentapplicationtransaction
+    delete:
+      summary: Delete Paymentapplicationtransaction
+  /api/paymentapplicationtransactionattempts:
+    get:
+      summary: List Paymentapplicationtransactionattempt
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create Paymentapplicationtransactionattempt
+      responses:
+        '201':
+          description: Created
+  /api/paymentapplicationtransactionattempts/{id}:
+    get:
+      summary: Get Paymentapplicationtransactionattempt by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update Paymentapplicationtransactionattempt
+    delete:
+      summary: Delete Paymentapplicationtransactionattempt
+  /api/paymentattempts:
+    get:
+      summary: List Paymentattempt
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create Paymentattempt
+      responses:
+        '201':
+          description: Created
+  /api/paymentattempts/{id}:
+    get:
+      summary: Get Paymentattempt by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update Paymentattempt
+    delete:
+      summary: Delete Paymentattempt
+  /api/paymentgateways:
+    get:
+      summary: List Paymentgateway
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create Paymentgateway
+      responses:
+        '201':
+          description: Created
+  /api/paymentgateways/{id}:
+    get:
+      summary: Get Paymentgateway by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update Paymentgateway
+    delete:
+      summary: Delete Paymentgateway
+  /api/paymentsteps:
+    get:
+      summary: List Paymentstep
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create Paymentstep
+      responses:
+        '201':
+          description: Created
+  /api/paymentsteps/{id}:
+    get:
+      summary: Get Paymentstep by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update Paymentstep
+    delete:
+      summary: Delete Paymentstep
+  /api/paymenttransactionquotefeedetails:
+    get:
+      summary: List Paymenttransactionquotefeedetail
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create Paymenttransactionquotefeedetail
+      responses:
+        '201':
+          description: Created
+  /api/paymenttransactionquotefeedetails/{id}:
+    get:
+      summary: Get Paymenttransactionquotefeedetail by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update Paymenttransactionquotefeedetail
+    delete:
+      summary: Delete Paymenttransactionquotefeedetail
+  /api/paymenttransactionquotefeedetailattempts:
+    get:
+      summary: List Paymenttransactionquotefeedetailattempt
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create Paymenttransactionquotefeedetailattempt
+      responses:
+        '201':
+          description: Created
+  /api/paymenttransactionquotefeedetailattempts/{id}:
+    get:
+      summary: Get Paymenttransactionquotefeedetailattempt by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update Paymenttransactionquotefeedetailattempt
+    delete:
+      summary: Delete Paymenttransactionquotefeedetailattempt
+  /api/paymentusers:
+    get:
+      summary: List Paymentuser
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create Paymentuser
+      responses:
+        '201':
+          description: Created
+  /api/paymentusers/{id}:
+    get:
+      summary: Get Paymentuser by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update Paymentuser
+    delete:
+      summary: Delete Paymentuser
+  /api/servicetypes:
+    get:
+      summary: List Servicetype
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create Servicetype
+      responses:
+        '201':
+          description: Created
+  /api/servicetypes/{id}:
+    get:
+      summary: Get Servicetype by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update Servicetype
+    delete:
+      summary: Delete Servicetype

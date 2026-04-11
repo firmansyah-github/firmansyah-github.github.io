@@ -3,7 +3,7 @@
     <generation>
         <outputDir>outputDir</outputDir>
         <packageName>packageName</packageName>
-        <rootDir>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</rootDir>
+        <rootDir>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output/test</rootDir>
         <specifyTemplateDir>true</specifyTemplateDir>
         <superClassName>superClassName</superClassName>
         <templateDir>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example</templateDir>
@@ -308,753 +308,283 @@
     <fileTmplts>
         <allFileAttrSelected>true</allFileAttrSelected>
         <create>true</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="user-defined-subroutines" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="many" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.user.defined.subroutines.4.entity.field.pk.fk.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Generate one test per entity" value="many" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Output path pattern" value="src/test/java/com/example/app/controller/[base]" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Filename pattern" value="[class]ControllerTest.java" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Replace existing files" value="true" no="4"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_JAVA_PACKAGE" desc="Java package" value="com.example.app.controller.[base]" no="5"/>
         <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.4.entity.field.pk.fk.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.4.entity.field.pk.fk.ftl</path>
+        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output/test</generatedPath>
+        <name>controllerTest.ftl</name>
+        <path>/Users/firmansyah.profess/Downloads/APIDOG/freemarker_crud_templates/templates/test/controllerTest.ftl</path>
         <selected>false</selected>
-        <size>35885</size>
+        <size>588</size>
     </fileTmplts>
     <fileTmplts>
         <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="one-path" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name." value="factor.user.defined.subroutines.11.private.file.attributes.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_DB_TYPE" desc="db2, postgresql, oracle, sqlserver, mysql" value="postgresql" no="5"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_APP_IP" desc="Description" value="localhost" no="6"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_DB_IP" desc="Description" value="localhost" no="7"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_DB_PORT" desc="db2-50000, postgresql-5432, oracle-1521, sqlserver-1433, mysql-3306" value="5432" no="8"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_DB_USER" desc="db2-dbadm, postgresql-postgres, oracle-system, sqlserver-sa, mysql-myuser" value="postgres" no="9"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_DB_NAME" desc="db2-MYDB, postgresql-postgres, oracle-ORCLPDB1, sqlserver-Express, mysql-mydb" value="postgres" no="10"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_DB_PASS" desc="Description" value="P@ssw0rd" no="11"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_APP_PKG" desc="Description" value="realworld-api-quarkus" no="12"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_XXXXX" desc="Description" value="VALUE" no="13"/>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Generate one file per entity" value="many" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Output path pattern" value="src/main/java/com/example/app/service/impl/[base]" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Filename pattern" value="[class]ServiceImpl.java" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Replace existing files" value="true" no="4"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_JAVA_PACKAGE" desc="Java package" value="com.example.app.service.impl.[base]" no="5"/>
         <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.11.private.file.attributes.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.11.private.file.attributes.ftl</path>
+        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output/test</generatedPath>
+        <name>serviceImpl.ftl</name>
+        <path>/Users/firmansyah.profess/Downloads/APIDOG/freemarker_crud_templates/templates/service/impl/serviceImpl.ftl</path>
         <selected>false</selected>
-        <size>4957</size>
+        <size>1945</size>
     </fileTmplts>
     <fileTmplts>
         <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="copy-path" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="copy" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="" value="" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="" value="" no="4"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_XXXXX" desc="Description" value="VALUE" no="5"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_DB_TYPE" desc="" value="" no="6"/>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Generate one file per entity" value="many" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Output path pattern" value="src/main/java/com/example/app/service/[base]" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Filename pattern" value="[class]Service.java" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Replace existing files" value="true" no="4"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_JAVA_PACKAGE" desc="Java package" value="com.example.app.service.[base]" no="5"/>
         <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>Note.md</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/Note.md</path>
+        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output/test</generatedPath>
+        <name>service.ftl</name>
+        <path>/Users/firmansyah.profess/Downloads/APIDOG/freemarker_crud_templates/templates/service/service.ftl</path>
         <selected>false</selected>
-        <size>30247</size>
+        <size>1327</size>
     </fileTmplts>
     <fileTmplts>
         <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Single OpenAPI file" value="one" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Output path" value="src/main/resources" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Filename" value="openapi.yaml" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Replace existing files" value="true" no="4"/>
         <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>README.md</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/README.md</path>
+        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output/test</generatedPath>
+        <name>openapi.ftl</name>
+        <path>/Users/firmansyah.profess/Downloads/APIDOG/freemarker_crud_templates/templates/openapi/openapi.ftl</path>
         <selected>false</selected>
-        <size>6218</size>
+        <size>898</size>
     </fileTmplts>
     <fileTmplts>
         <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="one-path" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name." value="factor.user.defined.subroutines.10.public.attributes.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Single configuration file" value="one" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Output path" value="src/main/java/com/example/app/config" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Filename" value="AppConfig.java" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Replace existing files" value="true" no="4"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_JAVA_PACKAGE" desc="Java package" value="com.example.app.config" no="5"/>
         <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.10.public.attributes.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.10.public.attributes.ftl</path>
+        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output/test</generatedPath>
+        <name>config.ftl</name>
+        <path>/Users/firmansyah.profess/Downloads/APIDOG/freemarker_crud_templates/templates/config/config.ftl</path>
         <selected>false</selected>
-        <size>5179</size>
+        <size>650</size>
     </fileTmplts>
     <fileTmplts>
         <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="one-path" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name." value="factor.user.defined.subroutines.9.public.system.datatype.mapping.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Single application exception file" value="one" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Output path" value="src/main/java/com/example/app/exception" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Filename" value="ApplicationExceptions.java" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Replace existing files" value="true" no="4"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_JAVA_PACKAGE" desc="Java package" value="com.example.app.exception" no="5"/>
         <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.9.public.system.datatype.mapping.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.9.public.system.datatype.mapping.ftl</path>
+        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output/test</generatedPath>
+        <name>exception.ftl</name>
+        <path>/Users/firmansyah.profess/Downloads/APIDOG/freemarker_crud_templates/templates/exception/exception.ftl</path>
         <selected>false</selected>
-        <size>7566</size>
+        <size>861</size>
     </fileTmplts>
     <fileTmplts>
         <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="many-path/main/java/[class]/[table]/[instance]/test/[base]" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="many" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name." value="factor.user.defined.subroutines.8.private.system.many.[table].[base].[class].[instance].txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_JAVA_PACKAGE" desc="Private System placeholder for define package name and auto create directory based on value definition" value="id.co.factor.[class].[table].[instance].[base]" no="5"/>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Generate one file per entity" value="many" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Output path pattern" value="src/main/java/com/example/app/controller/[base]" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Filename pattern" value="[class]Controller.java" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Replace existing files" value="true" no="4"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_JAVA_PACKAGE" desc="Java package" value="com.example.app.controller.[base]" no="5"/>
         <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.8.private.system.many.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.8.private.system.many.ftl</path>
+        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output/test</generatedPath>
+        <name>controller.ftl</name>
+        <path>/Users/firmansyah.profess/Downloads/APIDOG/freemarker_crud_templates/templates/controller/controller.ftl</path>
         <selected>false</selected>
-        <size>7808</size>
+        <size>2255</size>
     </fileTmplts>
     <fileTmplts>
         <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="one-path" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name." value="factor.user.defined.subroutines.7.private.system.one.change-filename.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Generate one file per entity" value="many" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Output path pattern" value="src/main/java/com/example/app/repository/[base]" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Filename pattern" value="[class]Repository.java" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Replace existing files" value="true" no="4"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_JAVA_PACKAGE" desc="Java package" value="com.example.app.repository.[base]" no="5"/>
         <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.7.private.system.one.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.7.private.system.one.ftl</path>
+        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output/test</generatedPath>
+        <name>repository.ftl</name>
+        <path>/Users/firmansyah.profess/Downloads/APIDOG/freemarker_crud_templates/templates/repository/repository.ftl</path>
         <selected>false</selected>
-        <size>5569</size>
+        <size>1210</size>
     </fileTmplts>
     <fileTmplts>
         <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="copy-path" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="copy" no="2"/>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Generate one file per entity" value="many" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Output path pattern" value="src/main/java/com/example/app/model/dto/[base]" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Filename pattern" value="[class]Dto.java" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Replace existing files" value="true" no="4"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_JAVA_PACKAGE" desc="Java package" value="com.example.app.model.dto.[base]" no="5"/>
         <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.6.private.system.copy.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.6.private.system.copy.ftl</path>
+        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output/test</generatedPath>
+        <name>dto.ftl</name>
+        <path>/Users/firmansyah.profess/Downloads/APIDOG/freemarker_crud_templates/templates/model/dto.ftl</path>
         <selected>false</selected>
-        <size>4522</size>
+        <size>1535</size>
     </fileTmplts>
     <fileTmplts>
         <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="user-defined-subroutines" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.user.defined.subroutines.5.fileTemplate.attributes.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Generate one file per entity" value="many" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Output path pattern - placeholders allowed: [table],[base],[class],[instance]" value="src/main/java/com/example/app/model/entity/[base]" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Filename pattern" value="[class].java" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Replace existing files" value="true" no="4"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_JAVA_PACKAGE" desc="Java package path placeholder mapping" value="com.example.app.model.entity.[base]" no="5"/>
         <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.5.fileTemplate.attributes.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.5.fileTemplate.attributes.ftl</path>
+        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output/test</generatedPath>
+        <name>entity.ftl</name>
+        <path>/Users/firmansyah.profess/Downloads/APIDOG/freemarker_crud_templates/templates/model/entity.ftl</path>
         <selected>false</selected>
-        <size>5497</size>
+        <size>3447</size>
     </fileTmplts>
     <fileTmplts>
         <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="user-defined-subroutines" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.user.defined.subroutines.3.draftTemplate.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
+        <create>true</create>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Generate single application class" value="one" no="1"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Output path" value="src/main/java/com/example/app" no="2"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Filename" value="Application.java" no="3"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Replace existing files" value="true" no="4"/>
+        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_JAVA_PACKAGE" desc="Java package" value="com.example.app" no="5"/>
         <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.3.draftTemplate.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.3.draftTemplate.ftl</path>
+        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output/test</generatedPath>
+        <name>Application.ftl</name>
+        <path>/Users/firmansyah.profess/Downloads/APIDOG/freemarker_crud_templates/templates/Application.ftl</path>
         <selected>false</selected>
-        <size>8972</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="user-defined-subroutines" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.user.defined.subroutines.2.generation.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.2.generation.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.2.generation.ftl</path>
-        <selected>false</selected>
-        <size>11347</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="user-defined-subroutines" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.user.defined.subroutines.1.database.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.user.defined.subroutines.1.database.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.user.defined.subroutines.1.database.ftl</path>
-        <selected>false</selected>
-        <size>13005</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>lib</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/lib</path>
-        <selected>false</selected>
-        <size>128</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor-config-example.xml</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor-config-example.xml</path>
-        <selected>false</selected>
-        <size>55099</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.permutation.pk.multidb.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.permutation.pk.multidb.ftl</path>
-        <selected>false</selected>
-        <size>2258</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.permutation.pk.singledb.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.permutation.pk.singledb.ftl</path>
-        <selected>false</selected>
-        <size>1439</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="predefined-subroutines" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.predefined.subroutines.3.loop.hashes.specialVariable.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.predefined.subroutines.3.loop.hashes.specialVariable.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.predefined.subroutines.3.loop.hashes.specialVariable.ftl</path>
-        <selected>false</selected>
-        <size>7334</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="predefined-subroutines" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.predefined.subroutines.4.sequences.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.predefined.subroutines.4.sequences.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.predefined.subroutines.4.sequences.ftl</path>
-        <selected>false</selected>
-        <size>8783</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="predefined-subroutines" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.predefined.subroutines.2.booleans.date.time.numbers.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.predefined.subroutines.2.booleans.date.time.numbers.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.predefined.subroutines.2.booleans.date.time.numbers.ftl</path>
-        <selected>false</selected>
-        <size>11017</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="directive" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.9.html_escape.setting.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.directives.9.html_escape.setting.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.9.html_escape.setting.ftl</path>
-        <selected>false</selected>
-        <size>3021</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="directive" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.6.list.else.items.sep.break.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.directives.6.list.else.items.sep.break.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.6.list.else.items.sep.break.ftl</path>
-        <selected>false</selected>
-        <size>3223</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="directive" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.7.local.macro.nested.return.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.directives.7.local.macro.nested.return.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.7.local.macro.nested.return.ftl</path>
-        <selected>false</selected>
-        <size>7261</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="predefined-subroutines" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.predefined.subroutines.1.string.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.predefined.subroutines.1.string.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.predefined.subroutines.1.string.ftl</path>
-        <selected>false</selected>
-        <size>14148</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="directive" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.8.stop.switch.case.default.break.trim.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.directives.8.stop.switch.case.default.break.trim.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.8.stop.switch.case.default.break.trim.ftl</path>
-        <selected>false</selected>
-        <size>2648</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="directive" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.2.assign.attempt.recover.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.directives.2.assign.attempt.recover.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.2.assign.attempt.recover.ftl</path>
-        <selected>false</selected>
-        <size>2582</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="directive" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.4.function.return.global.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.directives.4.function.return.global.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.4.function.return.global.ftl</path>
-        <selected>false</selected>
-        <size>3198</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="directive" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.3.compress.escape.flush.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.directives.3.compress.escape.flush.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.3.compress.escape.flush.ftl</path>
-        <selected>false</selected>
-        <size>2382</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.1.ftl.outputformat.comment.txt" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="3"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.directives.1.ftl.outputformat.comment.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.1.ftl.outputformat.comment.ftl</path>
-        <selected>false</selected>
-        <size>2950</size>
-    </fileTmplts>
-    <fileTmplts>
-        <allFileAttrSelected>true</allFileAttrSelected>
-        <create>false</create>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_PATH" desc="Private System placeholder for create generated relative path" value="directive" no="1"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_TYPE" desc="Please choose one option from this Private Gen type list: one, many, copy" value="one" no="2"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_GEN_FILENAME" desc="Private System placeholder for define file name that need to be generated, if required to be different with template name" value="factor.directives.5.if.elseif.else.import.include.txt" no="3"/>
-        <fileAttrList allFileAttrSelected="false" create="true" name="PRV_SYS_IS_REPLACE" desc="Private System placeholder for replace previous generated file or create unique file name,list:true,false" value="true" no="4"/>
-        <generatedType>copy</generatedType>
-        <generatedPath>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output</generatedPath>
-        <name>factor.directives.5.if.elseif.else.import.include.ftl</name>
-        <path>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example/factor.directives.5.if.elseif.else.import.include.ftl</path>
-        <selected>false</selected>
-        <size>2728</size>
+        <size>787</size>
     </fileTmplts>
     <filePublicAttrs>
-        <entry>
-            <key>PUB_SYS_DTM@double</key>
-            <value>
-                <name>PUB_SYS_DTM@double</name>
-                <no>18</no>
-                <value>double</value>
-                <desc>Numeric</desc>
-            </value>
-        </entry>
         <entry>
             <key>PUB_DB_TYPE</key>
             <value>
                 <name>PUB_DB_TYPE</name>
-                <no>2</no>
+                <no>1</no>
                 <value>postgresql</value>
-                <desc>db2, postgresql, oracle, sqlserver, mysql</desc>
+                <desc>Database type</desc>
             </value>
         </entry>
         <entry>
             <key>PUB_SYS_DTM@date</key>
             <value>
                 <name>PUB_SYS_DTM@date</name>
-                <no>24</no>
-                <value>java.sql.Date</value>
-                <desc>Date/Time</desc>
+                <no>9</no>
+                <value>LocalDate</value>
+                <desc>Date type mapping</desc>
             </value>
         </entry>
         <entry>
             <key>PUB_SYS_DTM@timestamp</key>
             <value>
                 <name>PUB_SYS_DTM@timestamp</name>
-                <no>26</no>
-                <value>java.time.LocalDateTime</value>
-                <desc>Date/Time</desc>
+                <no>8</no>
+                <value>LocalDateTime</value>
+                <desc>DateTime type mapping</desc>
             </value>
         </entry>
         <entry>
             <key>PUB_SYS_DTM@bytea</key>
             <value>
                 <name>PUB_SYS_DTM@bytea</name>
-                <no>23</no>
-                <value>byte</value>
-                <desc>Binary</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@cidr</key>
-            <value>
-                <name>PUB_SYS_DTM@cidr</name>
-                <no>33</no>
-                <value>String</value>
-                <desc>NetworkAddress</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@tsquery</key>
-            <value>
-                <name>PUB_SYS_DTM@tsquery</name>
-                <no>32</no>
-                <value>String</value>
-                <desc>Text</desc>
+                <no>13</no>
+                <value>byte[]</value>
+                <desc>Binary type mapping</desc>
             </value>
         </entry>
         <entry>
             <key>PUB_SYS_DTM@text</key>
             <value>
                 <name>PUB_SYS_DTM@text</name>
-                <no>22</no>
+                <no>6</no>
                 <value>String</value>
-                <desc>Character</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@interval</key>
-            <value>
-                <name>PUB_SYS_DTM@interval</name>
-                <no>27</no>
-                <value>String</value>
-                <desc>Date/Time</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@varchar</key>
-            <value>
-                <name>PUB_SYS_DTM@varchar</name>
-                <no>21</no>
-                <value>String</value>
-                <desc>Character</desc>
+                <desc>String type mapping</desc>
             </value>
         </entry>
         <entry>
             <key>PUB_APP_PKG</key>
             <value>
                 <name>PUB_APP_PKG</name>
-                <no>9</no>
-                <value>realworld-api-quarkus</value>
-                <desc>Description</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@enum</key>
-            <value>
-                <name>PUB_SYS_DTM@enum</name>
-                <no>29</no>
-                <value>String</value>
-                <desc>Enum</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@jsonb</key>
-            <value>
-                <name>PUB_SYS_DTM@jsonb</name>
-                <no>38</no>
-                <value>String</value>
-                <desc>JSON</desc>
+                <no>2</no>
+                <value>com.example.app</value>
+                <desc>Base application package</desc>
             </value>
         </entry>
         <entry>
             <key>PUB_SYS_DTM@uuid</key>
             <value>
                 <name>PUB_SYS_DTM@uuid</name>
-                <no>36</no>
-                <value>java.util.UUID</value>
-                <desc>UUID</desc>
+                <no>11</no>
+                <value>UUID</value>
+                <desc>UUID type mapping</desc>
             </value>
         </entry>
         <entry>
-            <key>PUB_DB_IP</key>
+            <key>PUB_APP_NAME</key>
             <value>
-                <name>PUB_DB_IP</name>
-                <no>4</no>
-                <value>localhost</value>
-                <desc>Description</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@macaddr</key>
-            <value>
-                <name>PUB_SYS_DTM@macaddr</name>
-                <no>35</no>
-                <value>String</value>
-                <desc>NetworkAddress</desc>
+                <name>PUB_APP_NAME</name>
+                <no>3</no>
+                <value>ExampleApp</value>
+                <desc>Application name</desc>
             </value>
         </entry>
         <entry>
             <key>PUB_SYS_DTM@bigint</key>
             <value>
                 <name>PUB_SYS_DTM@bigint</name>
-                <no>14</no>
-                <value>long</value>
-                <desc>Numeric</desc>
+                <no>5</no>
+                <value>Long</value>
+                <desc>Long type mapping</desc>
             </value>
         </entry>
         <entry>
             <key>PUB_SYS_DTM@boolean</key>
             <value>
                 <name>PUB_SYS_DTM@boolean</name>
-                <no>28</no>
+                <no>7</no>
                 <value>Boolean</value>
-                <desc>Boolean</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_APP_IP</key>
-            <value>
-                <name>PUB_APP_IP</name>
-                <no>3</no>
-                <value>localhost</value>
-                <desc>Description</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_DB_PASS</key>
-            <value>
-                <name>PUB_DB_PASS</name>
-                <no>8</no>
-                <value>P@ssw0rd</value>
-                <desc>Description</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@bit</key>
-            <value>
-                <name>PUB_SYS_DTM@bit</name>
-                <no>30</no>
-                <value>BitSet</value>
-                <desc>Bit</desc>
+                <desc>Boolean type mapping</desc>
             </value>
         </entry>
         <entry>
             <key>PUB_SYS_DTM@integer</key>
             <value>
                 <name>PUB_SYS_DTM@integer</name>
-                <no>13</no>
-                <value>int</value>
-                <desc>Numeric</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@numeric</key>
-            <value>
-                <name>PUB_SYS_DTM@numeric</name>
-                <no>16</no>
-                <value>BigDecimal</value>
-                <desc>Numeric</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_XXXXX</key>
-            <value>
-                <name>PUB_XXXXX</name>
-                <no>10</no>
-                <value>VALUE</value>
-                <desc>Description</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@DB_DT_TYPE</key>
-            <value>
-                <name>PUB_SYS_DTM@DB_DT_TYPE</name>
-                <no>11</no>
-                <value>PL_DT_TYPE</value>
-                <desc>Description</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@char</key>
-            <value>
-                <name>PUB_SYS_DTM@char</name>
-                <no>20</no>
-                <value>String</value>
-                <desc>Character</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@time</key>
-            <value>
-                <name>PUB_SYS_DTM@time</name>
-                <no>25</no>
-                <value>java.sql.Time</value>
-                <desc>Date/Time</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@inet</key>
-            <value>
-                <name>PUB_SYS_DTM@inet</name>
-                <no>34</no>
-                <value>String</value>
-                <desc>NetworkAddress</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_DB_USER</key>
-            <value>
-                <name>PUB_DB_USER</name>
-                <no>6</no>
-                <value>postgres</value>
-                <desc>db2-dbadm, postgresql-postgres, oracle-system, sqlserver-sa, mysql-myuser</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@smallint</key>
-            <value>
-                <name>PUB_SYS_DTM@smallint</name>
-                <no>12</no>
-                <value>short</value>
-                <desc>Numeric</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_DB_PORT</key>
-            <value>
-                <name>PUB_DB_PORT</name>
-                <no>5</no>
-                <value>5432</value>
-                <desc>db2-50000, postgresql-5432, oracle-1521, sqlserver-1433, mysql-3306</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@tsvector</key>
-            <value>
-                <name>PUB_SYS_DTM@tsvector</name>
-                <no>31</no>
-                <value>String</value>
-                <desc>Text</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@&lt;DB_DT_TYPE&gt;</key>
-            <value>
-                <name>PUB_SYS_DTM@&lt;DB_DT_TYPE&gt;</name>
-                <no>1</no>
-                <value>&lt;PL_DT_TYPE&gt;</value>
-                <desc>&lt;Description&gt;</desc>
+                <no>4</no>
+                <value>Integer</value>
+                <desc>Integer type mapping</desc>
             </value>
         </entry>
         <entry>
             <key>PUB_SYS_DTM@json</key>
             <value>
                 <name>PUB_SYS_DTM@json</name>
-                <no>37</no>
+                <no>12</no>
                 <value>String</value>
-                <desc>JSON</desc>
+                <desc>JSON type mapping</desc>
             </value>
         </entry>
         <entry>
             <key>PUB_SYS_DTM@decimal</key>
             <value>
                 <name>PUB_SYS_DTM@decimal</name>
-                <no>15</no>
+                <no>10</no>
                 <value>BigDecimal</value>
-                <desc>Numeric</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@real</key>
-            <value>
-                <name>PUB_SYS_DTM@real</name>
-                <no>17</no>
-                <value>float</value>
-                <desc>Numeric</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_DB_NAME</key>
-            <value>
-                <name>PUB_DB_NAME</name>
-                <no>7</no>
-                <value>postgres</value>
-                <desc>db2-MYDB, postgresql-postgres, oracle-ORCLPDB1, sqlserver-Express, mysql-mydb</desc>
-            </value>
-        </entry>
-        <entry>
-            <key>PUB_SYS_DTM@character</key>
-            <value>
-                <name>PUB_SYS_DTM@character</name>
-                <no>19</no>
-                <value>String</value>
-                <desc>Character</desc>
+                <desc>BigDecimal type mapping</desc>
             </value>
         </entry>
     </filePublicAttrs>

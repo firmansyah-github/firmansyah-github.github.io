@@ -152,7 +152,59 @@ The entity object represents a single data model entity and can be accessed in t
   <#list entity.toStringFieldList as field>
     <!-- Same field properties as above -->
   </#list>
+  
+  <!-- New Methods -->
+  <!-- Fields Excluding Primary Keys -->
+  <#list entity.fieldListExceptPrimaryKey as field>
+    <!-- Same field properties as above -->
+  </#list>
+  
+  <!-- Fields Excluding Primary Keys and Foreign Keys -->
+  <#list entity.fieldListExceptPrimaryKeyAndForeignKey as field>
+    <!-- Same field properties as above -->
+  </#list>
+  
+  <!-- Foreign Key Fields Only -->
+  <#list entity.foreignKeyFieldList as field>
+    <!-- Same field properties as above -->
+  </#list>
+  
+  <!-- Counts and Checks -->
+  ${entity.primaryKeyCount} - Number of primary key fields  
+  ${entity.foreignKeyCount} - Number of foreign key fields  
+  ${entity.hasPrimaryKey?string('true','false')} - Entity has at least one primary key  
+  ${entity.hasPrimaryKeySingle?string('true','false')} - Entity has exactly one primary key  
+  ${entity.hasPrimaryKeyCompound?string('true','false')} - Entity has multiple primary keys (composite)  
+  ${entity.hasForeignKey?string('true','false')} - Entity has at least one foreign key  
+  ${entity.hasForeignKeySingle?string('true','false')} - Entity has exactly one foreign key  
+  ${entity.hasForeignKeyCompound?string('true','false')} - Entity has multiple foreign keys  
+  <!-- Primary Key Checks -->
+<#if entity.hasPrimaryKey>
+  Entity has at least one primary key
+</#if>
+
+<#if entity.hasPrimaryKeySingle>
+  Entity has exactly one primary key
+</#if>
+
+<#if entity.hasPrimaryKeyCompound>
+  Entity has multiple primary keys (composite)
+</#if>
+
+<!-- Foreign Key Checks -->
+<#if entity.hasForeignKey>
+  Entity has at least one foreign key
+</#if>
+
+<#if entity.hasForeignKeySingle>
+  Entity has exactly one foreign key
+</#if>
+
+<#if entity.hasForeignKeyCompound>
+  Entity has multiple foreign keys
+</#if>
 </#list>
+
 ```
 
 **Field Object Properties:**

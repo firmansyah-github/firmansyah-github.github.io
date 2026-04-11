@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  namespace: nginx-ns
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        volumeMounts:
+        - name: podinfo
+          mountPath: /etc/podinfo
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        # Create a custom index page that shows pod info
+        command: 
+        - /bin/sh
+        - -c
+        args:
+        - |
+          POD_NAMEX=
+          POD_IPX=
+          echo "<html>
+          <head><title>NGINX</title></head>
+          <body>
+            <h1>Pod: </h1>
+            <p>IP: </p>
+            <p>Host: lt-0624-022</p>
+            <p>Time: Fri Sep  5 12:03:59 +04 2025</p>
+          </body>
+          </html>" > /usr/share/nginx/html/index.html
+          exec nginx -g 'daemon off;'
+      volumes:
+      - name: podinfo
+        downwardAPI:
+          items:
+          - path: "name"
+            fieldRef:
+              fieldPath: metadata.name
+          - path: "ip"
+            fieldRef:
+              fieldPath: metadata.uid

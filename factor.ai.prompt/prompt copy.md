@@ -2,13 +2,24 @@
 
 create freemarker templates based on above info and with following requirement:
 freemarker files for generate CRUD springboot code application 
-Layered Architecture (N-Tier / MVC)
+Layered Architecture (N-Tier / MVC):
+```
+src/main/java/
+└── com.example.app/
+    ├── controller/
+    ├── service/
+    │   └── impl/
+    ├── repository/
+    ├── model/
+    │   ├── entity/
+    │   └── dto/
+    ├── config/
+    ├── exception/
+    └── Application.java
+```
 support Primary key and Foreign key including compound PK and FK. 
 Using FreeMarker 2.3.33.
-Add DTOs and mappers
-Foreign key relationship joins
-Additional config for compound keys via @IdClass or @EmbeddedId
-Pagination and filtering logic in service/controller
+
 Tests or API documentation
 All file must be in one downloadable zip file.
 

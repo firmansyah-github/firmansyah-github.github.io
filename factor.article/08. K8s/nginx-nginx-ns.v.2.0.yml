@@ -1,0 +1,68 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nginx-ns
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-index
+  namespace: nginx-ns
+data:
+  index.html: |
+    <html>
+    <body style="font-family: sans-serif; text-align: center; margin-top: 50px;">
+      <h1>Served by NGINX Pod: $(POD_NAME)</h1>
+    </body>
+    </html>
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  namespace: nginx-ns
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: bitnami/nginx:latest
+        command: ["/bin/sh", "-c"]
+        args:
+          - envsubst < /usr/share/nginx/html/index.html.template > /usr/share/nginx/html/index.html && \
+            exec nginx -g 'daemon off;'
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: index
+          mountPath: /usr/share/nginx/html/index.html.template
+          subPath: index.html
+      volumes:
+      - name: index
+        configMap:
+          name: nginx-index
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+  namespace: nginx-ns
+spec:
+  type: LoadBalancer
+  selector:
+    app: nginx
+  ports:
+  - port: 80
+    targetPort: 8080
