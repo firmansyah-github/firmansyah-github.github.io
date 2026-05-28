@@ -1,8 +1,7 @@
-* [Home](/factor.docs/README.md)
-
-* [FreeMarker Template Engineering](/factor.docs.freemarker.xmind/README.md)
-
-* [Eclipse IDE Snippets Mastery](/factor.docs.eclipse.snippets/README.md)
+* Starter-kit Playground
+  * [Overview](/factor.docs/README.md)
+  * [Factor FreeMarker Mindmap](/factor.docs.freemarker.xmind/README.md)
+  * [Factor Eclipse IDE Snippets](/factor.docs.eclipse.snippets/README.md)
 
 * **factor.docs.ai.prompt**
   * [chatgpt](/factor.docs.ai.prompt/chatgpt.md)
