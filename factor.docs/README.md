@@ -12,15 +12,15 @@ This playground is structured around three foundational pillars, designed to dra
 
 ### 1. 🧠 Factor FreeMarker Mindmap & Xmind Design Tool
 To facilitate a rapid and deep understanding of Apache FreeMarker 2.3.26 (the powerful engine behind our code generators), we have provided a detailed, interactive mind map. This visual guide maps syntax, directives, and best practices directly into your brain.
-👉 **[Explore the Mindmap & Xmind Guide](./factor.freemarker.xmind/README.md)**
+👉 **[Explore the Mindmap & Xmind Guide](../factor.docs.freemarker.xmind/README.md)**
 
 ### 2. 🗃️ Factor Eclipse IDE Snippets (XML Templates)
 Speed up your daily development with pre-configured, modular code snippets for Eclipse IDE. These XML snippet definitions integrate seamlessly into your workspace, allowing you to insert complex template blocks, loop constructs, and boilerplate declarations with a few simple keystrokes.
-👉 **[Learn to Import and Use Snippets](./factor.eclipse.snippets/README.md)**
+👉 **[Learn to Import and Use Snippets](../factor.docs.eclipse.snippets/README.md)**
 
 ### 3. 📄 Factor FreeMarker Template Examples
 Hands-on, field-tested template blueprints that you can immediately modify, render, and deploy. These templates demonstrate how to unleash the full power of **"Content Assist of The Factor FreeMarker"** for automated code generation. Note that Content Assist is fully optimized when templates are edited inside the Factor Eclipse Plugin editor.
-👉 **[Browse Template Blueprint Examples](./factor.templates.example/README.md)**
+👉 **[Browse Template Blueprint Examples](../factor.docs.templates.example/README.md)**
 
 ---
 

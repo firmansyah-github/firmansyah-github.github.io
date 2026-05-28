@@ -1,7 +1,7 @@
 Here's a comprehensive script to set up a local Kubernetes environment on your MacBook using Colima and Kind, create a cluster with 1 node, set up a namespace, deploy a 3-replica NGINX pod, and configure load balancing:
 
 ```bash
-cd "/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.article/08. K8s"
+cd "/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.docs.article/08. K8s"
 ./deepseek.setup.k8s.sh
 ```
 
@@ -414,8 +414,8 @@ sockaddrs: <DST,GATEWAY,NETMASK>
 add net 172.18: gateway 192.168.64.2
 
 firmansyah.profess@LT-0624-022 08. K8s % colima ssh
-lima@colima:/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.article/08. K8s$ sudo iptables -A FORWARD -s 192.168.64.1 -d 172.18.0.0/16 -i col0 -o br-0ee7084f9578 -p tcp -j ACCEPT
-lima@colima:/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.article/08. K8s$ exit
+lima@colima:/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.docs.article/08. K8s$ sudo iptables -A FORWARD -s 192.168.64.1 -d 172.18.0.0/16 -i col0 -o br-0ee7084f9578 -p tcp -j ACCEPT
+lima@colima:/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.docs.article/08. K8s$ exit
 logout
 
 firmansyah.profess@LT-0624-022 08. K8s % LB_IP=$(kubectl get svc/foo-bar-service -o=jsonpath='{.status.loadBalancer.ingress[0].ip}')

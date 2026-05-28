@@ -93,7 +93,7 @@ echo "✅ Cleanup complete. Your MacBook is now free from Colima + Kind + Lens +
 3. Run:
 
    ```bash
-   cd "/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.article/08. K8s"
+   cd "/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.docs.article/08. K8s"
    ./deepseek.clean.full.k8s.sh
    ```
 

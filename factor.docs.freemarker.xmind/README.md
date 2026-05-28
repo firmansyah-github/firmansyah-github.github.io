@@ -36,17 +36,17 @@ Here is a curated walkthrough of the primary dimensions represented in the mind 
 ### 1. High-Level Architecture
 Covers the three foundational domains of Apache FreeMarker: the **Programmer's Guide** (integrating FreeMarker into custom Java frameworks), the **XML Processing Guide** (transforming hierarchical schemas), and the **Template Author Guide** (the core environment for template customizers).
 ![Apache FreeMarker 2.3.26 Architecture](./images/Apache%20FreeMarker%202.3.26.png)
-*Online Link:* [Apache FreeMarker 2.3.26 Architecture Diagram](https://github.com/firmansyah-github/firmansyah.factor.starterkit.playground/blob/master/factor.freemarker.xmind/images/Apache%20FreeMarker%202.3.26.png)
+*Online Link:* [Apache FreeMarker 2.3.26 Architecture Diagram](https://github.com/firmansyah-github/firmansyah.factor.starterkit.playground/blob/master/factor.docs.freemarker.xmind/images/Apache%20FreeMarker%202.3.26.png)
 
 ### 2. Predefined Directives
 Your structural building blocks. It is highly recommended to focus on this section, as these directives control loop constructs, conditional evaluations, context definitions, macro creation, and module imports inside your code blueprints.
 ![Predefined Directives Mind Map](./images/Predefined%20Directives.png)
-*Online Link:* [Predefined Directives Mind Map](https://github.com/firmansyah-github/firmansyah.factor.starterkit.playground/blob/master/factor.freemarker.xmind/images/Predefined%20Directives.png)
+*Online Link:* [Predefined Directives Mind Map](https://github.com/firmansyah-github/firmansyah.factor.starterkit.playground/blob/master/factor.docs.freemarker.xmind/images/Predefined%20Directives.png)
 
 ### 3. Predefined Subroutines (Built-In Filters)
 These are utility subroutines that act directly on data types. They allow you to transform table and field names dynamically—such as converting standard database naming conventions (`USER_ORDER_DETAIL`) into camel-case Class names (`UserOrderDetail`), checking for null values, or formatting numeric IDs.
 ![Predefined Subroutines Mind Map](./images/Predefined%20Subroutines.png)
-*Online Link:* [Predefined Subroutines Mind Map](https://github.com/firmansyah-github/firmansyah.factor.starterkit.playground/blob/master/factor.freemarker.xmind/images/Predefined%20Subroutines.png)
+*Online Link:* [Predefined Subroutines Mind Map](https://github.com/firmansyah-github/firmansyah.factor.starterkit.playground/blob/master/factor.docs.freemarker.xmind/images/Predefined%20Subroutines.png)
 
 ### 🕹️ How to Navigate the Mind Map in XMind
 Once you load the file in XMind, use these interactive tips for maximum comprehension:
@@ -104,7 +104,7 @@ To interact with the visual map, install the standard XMind brainstorming utilit
 2. If prompted, you can **Sign In** or choose **Skip** to bypass account registration and use XMind offline immediately.
 3. From the main menu, navigate to **File ➡️ Open...** (or press `Ctrl + O` / `Cmd + O`).
 4. Browse your file system, navigate to this starter-kit workspace, and select the mind map located at:
-   `./factor.freemarker.xmind/xmind/Apache FreeMarker.xmind`
+   `./factor.docs.freemarker.xmind/xmind/Apache FreeMarker.xmind`
 5. The visual workspace will open instantly. You are now ready to explore!
 
 ---

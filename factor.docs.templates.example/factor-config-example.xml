@@ -6,7 +6,7 @@
         <rootDir>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/output/test</rootDir>
         <specifyTemplateDir>true</specifyTemplateDir>
         <superClassName>superClassName</superClassName>
-        <templateDir>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.templates.example</templateDir>
+        <templateDir>/Users/firmansyah.profess/factor-workspace/firmansyah.factor.starterkit.playground/factor.docs.templates.example</templateDir>
     </generation>
     <database>
         <profileName>New PostgreSQL factor</profileName>

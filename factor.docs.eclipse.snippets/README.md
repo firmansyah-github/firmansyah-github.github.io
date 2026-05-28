@@ -50,13 +50,13 @@ We have structured the 15 pre-configured XML snippet files into three logical, p
 
 | File Name | Functional Coverage | Key Templates Included |
 | :--- | :--- | :--- |
-| [**Factor - Predefined Subroutines - String.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.eclipse.snippets/Factor%20-%20Predefined%20Subroutines%20-%20String.xml) | Text & case manipulations | `?cap_first`, `?uncap_first`, `?upper_case`, `?lower_case`, `?replace` |
-| [**Factor - Predefined Subroutines - Loop variable.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.eclipse.snippets/Factor%20-%20Predefined%20Subroutines%20-%20Loop%20variable.xml) | Loop state queries | `_index`, `_has_next`, `_is_first`, `_is_last` |
-| [**Factor - Predefined Subroutines - Booleans:Date:Time:Numbers.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.eclipse.snippets/Factor%20-%20Predefined%20Subroutines%20-%20Booleans:Date:Time:Numbers.xml) | Type casting & conversions | `?string("yes", "no")`, `?string("yyyy-MM-dd")`, `?c` (Computer Number Format) |
-| [**Factor - Predefined Subroutines - Special Variable Reference.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.eclipse.snippets/Factor%20-%20Predefined%20Subroutines%20-%20Special%20Variable%20Reference.xml) | Engine metadata lookups | `.now` (Current Timestamp), `.version`, `.main_template_name` |
-| [**Factor - Predefined Subroutines - Hashes:Type independent:Seldom used and Expert.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.eclipse.snippets/Factor%20-%20Predefined%20Subroutines%20-%20Hashes:Type%20independent:Seldom%20used%20and%20Expert.xml) | Specialized advanced utilities | `?keys`, `?values`, `?is_sequence`, `?is_hash` |
-| [**Factor - Predefined Subroutines - Sequences.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.eclipse.snippets/Factor%20-%20Predefined%20Subroutines%20-%20Sequences.xml) | Array/list operations | `?first`, `?last`, `?seq_contains`, `?join` |
-| [**Factor - Directives.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.eclipse.snippets/Factor%20-%20Directives.xml) | FTL flow controllers | `<#list>`, `<#if>`, `<#assign>`, `<#macro>`, `<#import>` |
+| [**Factor - Predefined Subroutines - String.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.docs.eclipse.snippets/Factor%20-%20Predefined%20Subroutines%20-%20String.xml) | Text & case manipulations | `?cap_first`, `?uncap_first`, `?upper_case`, `?lower_case`, `?replace` |
+| [**Factor - Predefined Subroutines - Loop variable.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.docs.eclipse.snippets/Factor%20-%20Predefined%20Subroutines%20-%20Loop%20variable.xml) | Loop state queries | `_index`, `_has_next`, `_is_first`, `_is_last` |
+| [**Factor - Predefined Subroutines - Booleans:Date:Time:Numbers.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.docs.eclipse.snippets/Factor%20-%20Predefined%20Subroutines%20-%20Booleans:Date:Time:Numbers.xml) | Type casting & conversions | `?string("yes", "no")`, `?string("yyyy-MM-dd")`, `?c` (Computer Number Format) |
+| [**Factor - Predefined Subroutines - Special Variable Reference.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.docs.eclipse.snippets/Factor%20-%20Predefined%20Subroutines%20-%20Special%20Variable%20Reference.xml) | Engine metadata lookups | `.now` (Current Timestamp), `.version`, `.main_template_name` |
+| [**Factor - Predefined Subroutines - Hashes:Type independent:Seldom used and Expert.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.docs.eclipse.snippets/Factor%20-%20Predefined%20Subroutines%20-%20Hashes:Type%20independent:Seldom%20used%20and%20Expert.xml) | Specialized advanced utilities | `?keys`, `?values`, `?is_sequence`, `?is_hash` |
+| [**Factor - Predefined Subroutines - Sequences.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.docs.eclipse.snippets/Factor%20-%20Predefined%20Subroutines%20-%20Sequences.xml) | Array/list operations | `?first`, `?last`, `?seq_contains`, `?join` |
+| [**Factor - Directives.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.docs.eclipse.snippets/Factor%20-%20Directives.xml) | FTL flow controllers | `<#list>`, `<#if>`, `<#assign>`, `<#macro>`, `<#import>` |
 
 ---
 
@@ -65,12 +65,12 @@ We have structured the 15 pre-configured XML snippet files into three logical, p
 
 | File Name | Functional Coverage | Key Scaffolding Attributes |
 | :--- | :--- | :--- |
-| [**Factor - User Defined Subroutines - Database.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.eclipse.snippets/Factor%20-%20User%20Defined%20Subroutines%20-%20Database.xml) | Target database connections | `${db.catalog}`, `${db.schema}`, `${db.productName}` |
-| [**Factor - User Defined Subroutines - Entity.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.eclipse.snippets/Factor%20-%20User%20Defined%20Subroutines%20-%20Entity.xml) | Code entity metadata | `${table.name}`, `${table.capitalizedName}`, `${table.comment}` |
-| [**Factor - User Defined Subroutines - Field.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.eclipse.snippets/Factor%20-%20User%20Defined%20Subroutines%20-%20Field.xml) | Columns/fields configurations | `${field.name}`, `${field.javaType}`, `${field.isNullable}`, `${field.isPrimaryKey}` |
-| [**Factor - User Defined Subroutines - Exported Keys.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.eclipse.snippets/Factor%20-%20User%20Defined%20Subroutines%20-%20Exported%20Keys.xml) | Foreign Key outgoing references | `${exportedKey.pkTableName}`, `${exportedKey.fkColumnName}` |
-| [**Factor - User Defined Subroutines - Imported Keys.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.eclipse.snippets/Factor%20-%20User%20Defined%20Subroutines%20-%20Imported%20Keys.xml) | Foreign Key incoming references | `${importedKey.pkTableName}`, `${importedKey.fkColumnName}` |
-| [**Factor - User Defined Subroutines - Generation.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.eclipse.snippets/Factor%20-%20User%20Defined%20Subroutines%20-%20Generation.xml) | Project target directories | `${generation.projectFolder}`, `${generation.packageName}` |
+| [**Factor - User Defined Subroutines - Database.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.docs.eclipse.snippets/Factor%20-%20User%20Defined%20Subroutines%20-%20Database.xml) | Target database connections | `${db.catalog}`, `${db.schema}`, `${db.productName}` |
+| [**Factor - User Defined Subroutines - Entity.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.docs.eclipse.snippets/Factor%20-%20User%20Defined%20Subroutines%20-%20Entity.xml) | Code entity metadata | `${table.name}`, `${table.capitalizedName}`, `${table.comment}` |
+| [**Factor - User Defined Subroutines - Field.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.docs.eclipse.snippets/Factor%20-%20User%20Defined%20Subroutines%20-%20Field.xml) | Columns/fields configurations | `${field.name}`, `${field.javaType}`, `${field.isNullable}`, `${field.isPrimaryKey}` |
+| [**Factor - User Defined Subroutines - Exported Keys.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.docs.eclipse.snippets/Factor%20-%20User%20Defined%20Subroutines%20-%20Exported%20Keys.xml) | Foreign Key outgoing references | `${exportedKey.pkTableName}`, `${exportedKey.fkColumnName}` |
+| [**Factor - User Defined Subroutines - Imported Keys.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.docs.eclipse.snippets/Factor%20-%20User%20Defined%20Subroutines%20-%20Imported%20Keys.xml) | Foreign Key incoming references | `${importedKey.pkTableName}`, `${importedKey.fkColumnName}` |
+| [**Factor - User Defined Subroutines - Generation.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.docs.eclipse.snippets/Factor%20-%20User%20Defined%20Subroutines%20-%20Generation.xml) | Project target directories | `${generation.projectFolder}`, `${generation.packageName}` |
 
 ---
 
@@ -79,8 +79,8 @@ We have structured the 15 pre-configured XML snippet files into three logical, p
 
 | File Name | Bundle Details | Recommendation |
 | :--- | :--- | :--- |
-| [**factor-snippets-all-with-user-defined.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.eclipse.snippets/factor-snippets-all-with-user-defined.xml) | Includes ALL core FreeMarker and Factor custom metadata macros. | **Highly Recommended** for comprehensive template design workspaces. |
-| [**factor-snippets-all-without-user-defined.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.eclipse.snippets/factor-snippets-all-without-user-defined.xml) | Includes ONLY the core FreeMarker language and syntax macros. | Recommended for pure, generic FTL template authoring. |
+| [**factor-snippets-all-with-user-defined.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.docs.eclipse.snippets/factor-snippets-all-with-user-defined.xml) | Includes ALL core FreeMarker and Factor custom metadata macros. | **Highly Recommended** for comprehensive template design workspaces. |
+| [**factor-snippets-all-without-user-defined.xml**](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.docs.eclipse.snippets/factor-snippets-all-without-user-defined.xml) | Includes ONLY the core FreeMarker language and syntax macros. | Recommended for pure, generic FTL template authoring. |
 
 ---
 
@@ -117,7 +117,7 @@ Follow these structured steps to load the XML snippet files into your active Ecl
    *Figure 2.2: The "Customize Palette" dashboard, highlighting the "Import..." and "Export..." tool actions.*
 
 3. Browse your local files and navigate to this workspace subdirectory:  
-   `./factor.eclipse.snippets/`
+   `./factor.docs.eclipse.snippets/`
 4. Choose **`factor-snippets-all-with-user-defined.xml`** for the full suite, or select a specific file from Suite A/B based on your current project focus.
 5. Click **Open** (or **OK**). The importer will parse the XML and generate structured drawers instantly.
 
