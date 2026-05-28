@@ -56,5 +56,24 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+
+  <!-- Mermaid Graph Support -->
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ 
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#1f2937',
+        primaryTextColor: '#f1f5f9',
+        primaryBorderColor: '#3b82f6',
+        lineColor: '#3b82f6',
+        secondaryColor: '#111827',
+        tertiaryColor: '#0a0e1a'
+      }
+    });
+    window.mermaid = mermaid;
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-mermaid@2.0.1/dist/docsify-mermaid.js"></script>
 </body>
 </html>

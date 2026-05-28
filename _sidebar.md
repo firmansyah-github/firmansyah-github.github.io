@@ -1,5 +1,8 @@
 * [Home](/README.md)
 
+* **FreeMarker Template Engineering**
+  * [FreeMarker 2.3.26 Starter Kit & Mindmap](/factor.freemarker.xmind/README.md)
+
 * **factor.ai.prompt**
   * [factor.ai.prompt.basic.java.deepseek](/factor.ai.prompt/factor.ai.prompt.basic.java.deepseek.md)
   * [factor.ai.prompt.basic.java](/factor.ai.prompt/factor.ai.prompt.basic.java.md)
@@ -38,10 +41,6 @@
 
 * **factor.eclipse.snippets**
   * [README](/factor.eclipse.snippets/README.md)
-
-* **factor.freemarker.xmind**
-  * [README](/factor.freemarker.xmind/README.md)
-  * [README](/factor.freemarker.xmind/xmind/README.md)
 
 * **factor.templates.example**
   * [Note](/factor.templates.example/Note.md)
