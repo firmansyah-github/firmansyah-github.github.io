@@ -1,7 +1,9 @@
-* Starter-kit Playground
+* Starter-kit Template Playground
   * [Overview](/factor.docs/README.md)
-  * [Factor FreeMarker Mindmap](/factor.docs.freemarker.xmind/README.md)
-  * [Factor Eclipse IDE Snippets](/factor.docs.eclipse.snippets/README.md)
+  * [Factor FreeMarker Mindmap (Xmind)](/factor.docs.freemarker.xmind/README.md)
+  * [Factor Eclipse Snippet](/factor.docs.eclipse.snippets/README.md)
+  * [Factor FreeMarker Template Editor](/factor.docs.templates.editor/README.md)
+  * [Factor FreeMarker Template Blueprint Example](/factor.docs.templates.example/README.md)
 
 * **factor.docs.ai.prompt**
   * [chatgpt](/factor.docs.ai.prompt/chatgpt.md)

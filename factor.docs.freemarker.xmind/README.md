@@ -1,4 +1,4 @@
-# 🚀 Apache FreeMarker 2.3.26 Master Learning Kit
+# 🚀 Factor FreeMarker Mindmap (Xmind) - Apache FreeMarker 2.3.26 Master Learning Kit
 ### *Accelerating Dynamic Template Engineering for The Factor Eclipse Plugin*
 
 Welcome to the **Apache FreeMarker 2.3.26 Master Learning Kit**. This comprehensive workspace resource is designed to help software engineers, enterprise architects, and rapid-prototyping specialists master the template rendering engine powering **The Factor (Firmansyah Advanced CRUD Generator) Eclipse Plugin**.

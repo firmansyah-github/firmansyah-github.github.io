@@ -10,15 +10,19 @@ Whether you are looking to automate boilerplate CRUD code, streamline database-t
 
 This playground is structured around three foundational pillars, designed to dramatically reduce cognitive overhead and accelerate your development workflow:
 
-### 1. 🧠 Factor FreeMarker Mindmap & Xmind Design Tool
+### 1. 🧠 Factor FreeMarker Mindmap (Xmind)
 To facilitate a rapid and deep understanding of Apache FreeMarker 2.3.26 (the powerful engine behind our code generators), we have provided a detailed, interactive mind map. This visual guide maps syntax, directives, and best practices directly into your brain.
 👉 **[Explore the Mindmap & Xmind Guide](../factor.docs.freemarker.xmind/README.md)**
 
-### 2. 🗃️ Factor Eclipse IDE Snippets (XML Templates)
+### 2. 🗃️ Factor Eclipse Snippet
 Speed up your daily development with pre-configured, modular code snippets for Eclipse IDE. These XML snippet definitions integrate seamlessly into your workspace, allowing you to insert complex template blocks, loop constructs, and boilerplate declarations with a few simple keystrokes.
 👉 **[Learn to Import and Use Snippets](../factor.docs.eclipse.snippets/README.md)**
 
-### 3. 📄 Factor FreeMarker Template Examples
+### 3. 📝 Factor FreeMarker Template Editor
+Supercharge your template authoring with the Factor Eclipse Template Editor. Combining Apache FreeMarker 2.3.26 and JBoss FreeMarkerIDE, this editor unlocks three powerful content assist modes (Predefined Subroutines, User-Defined Subroutines, and Directives Content Assist) complete with in-context autocomplete and workspace frame guides.
+👉 **[Learn to Use the Template Editor](../factor.docs.templates.editor/README.md)**
+
+### 4. 📄 Factor FreeMarker Template Blueprint Example
 Hands-on, field-tested template blueprints that you can immediately modify, render, and deploy. These templates demonstrate how to unleash the full power of **"Content Assist of The Factor FreeMarker"** for automated code generation. Note that Content Assist is fully optimized when templates are edited inside the Factor Eclipse Plugin editor.
 👉 **[Browse Template Blueprint Examples](../factor.docs.templates.example/README.md)**
 

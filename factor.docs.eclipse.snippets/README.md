@@ -1,4 +1,4 @@
-# 🔌 Eclipse XML Snippets: The Factor Rapid Template Kit
+# 🔌 Factor Eclipse Snippet: The Factor Rapid Template Kit
 ### *Accelerating FreeMarker Blueprint Development inside Eclipse IDE*
 
 Welcome to the **Eclipse XML Snippets Workspace**. This guide will show you how to leverage pre-configured, modular code snippet libraries to achieve **maximum velocity** when writing and customising templates for **The Factor (Firmansyah Advanced CRUD Generator) Eclipse Plugin**.
@@ -25,19 +25,6 @@ graph LR
 ### 📺 High-Quality Video Reference & Walkthrough
 To see this system demonstrated in real-time, refer to our comprehensive video guide:
 👉 **[Watch the Eclipse Snippets Masterclass (YouTube)](https://www.youtube.com/watch?v=N4v91GyLumw&t=372s)**
-
----
-
-## 🎨 Autocomplete & Content Assist in Action
-
-By importing our XML snippet suites into Eclipse, you unlock **Content Assist of The Factor FreeMarker**. Typing the `<@` directive prefix followed by `Ctrl + Space` immediately launches the custom auto-complete panel, which displays all user-defined macros and subroutines dynamically inside your editor window.
-
-Below is an exact visual frame capture demonstrating the auto-complete popup inside the active Eclipse template editor at **[timestamp 06:12](https://www.youtube.com/watch?v=N4v91GyLumw&t=372s)**:
-
-![Content Assist Autocomplete View](./images/snippets_view.png)
-
-> [!IMPORTANT]
-> **Pro-Tip for Developers:** To trigger this intelligent popup, ensure your cursor is placed directly after the `<@` characters inside your `.ftl` file, then press the standard Eclipse hotkey combination `Ctrl + Space` (or `Cmd + Space` on macOS).
 
 ---
 
