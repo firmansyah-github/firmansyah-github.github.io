@@ -1,4 +1,4 @@
-# 🔌 Factor Eclipse Snippet: The Factor Rapid Template Kit
+# 🔌 Factor Template Eclipse Snippet: The Factor Rapid Template Kit
 ### *Accelerating FreeMarker Blueprint Development inside Eclipse IDE*
 
 Welcome to the **Eclipse XML Snippets Workspace**. This guide will show you how to leverage pre-configured, modular code snippet libraries to achieve **maximum velocity** when writing and customising templates for **The Factor (Firmansyah Advanced CRUD Generator) Eclipse Plugin**.

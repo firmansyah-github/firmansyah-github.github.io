@@ -25,11 +25,27 @@ Inside the Factor ecosystem, template blueprints are divided into three highly f
 
 To master dynamic code generation, it is crucial to understand the **Three Generation Modes** of The Factor. These modes are declared using private system attributes inside an FTL comment block:
 
-| Generation Type | Attribute Syntax | Target Scope | Output Behavior | Evaluates Logic? |
-| :--- | :--- | :--- | :--- | :--- |
-| **`copy`** *(Default)* | `${PRV_SYS_GEN_TYPE\|copy\|...}` | Files & Folders | Copies file/folder structure exactly as-is to the destination path. | **No** (Direct raw copy) |
-| **`one`** | `${PRV_SYS_GEN_TYPE\|one\|...}` | Files Only | Generates a single target file per template. Strips `.ftl` extension automatically. | **Yes** (Full evaluation) |
-| **`many`** | `${PRV_SYS_GEN_TYPE\|many\|...}` | Files Only | Generates multiple files dynamically based on database entities. Supports placeholding patterns in paths and filenames. | **Yes** (Iterates over metadata) |
+| Generation Type | Attribute Syntax | Target Scope | Output Behavior | Evaluates Logic? | Video Demonstration |
+| :--- | :--- | :--- | :--- | :--- | :---: |
+| **`copy`** *(Default)* | `${PRV_SYS_GEN_TYPE\|copy\|...}` | Files & Folders | Copies file/folder structure exactly as-is to the destination path. | **No** (Direct raw copy) | [📺 Watch (0:55)](https://www.youtube.com/watch?v=1303vgwI8x8&t=55s) |
+| **`one`** | `${PRV_SYS_GEN_TYPE\|one\|...}` | Files Only | Generates a single target file per template. Strips `.ftl` extension automatically. | **Yes** (Full evaluation) | [📺 Watch (6:34)](https://www.youtube.com/watch?v=1303vgwI8x8&t=394s) |
+| **`many`** | `${PRV_SYS_GEN_TYPE\|many\|...}` | Files Only | Generates multiple files dynamically based on database entities. Supports placeholding patterns in paths and filenames. | **Yes** (Iterates over metadata) | [📺 Watch (10:27)](https://www.youtube.com/watch?v=1303vgwI8x8&t=627s) |
+
+### 🎥 Masterclass: Template Generation Types — Copy, One & Many (11 min)
+
+This professional-grade masterclass focuses on the core **Generation Types (Copy, One, Many)** in the Factor Eclipse Plugin. You will learn the mechanical differences, configuration mappings, and see live demonstrations of static file copying (`Copy`), single-entity generation (`One`), and dynamic relation-driven scaffolding (`Many`).
+
+📺 **[Watch the Template Generation Types Masterclass (11 min)](https://www.youtube.com/watch?v=1303vgwI8x8)**
+
+#### 🧭 Video Chapters & Navigation Map
+
+Skip directly to the specific topic you need using these synchronized timeline links:
+
+* ⏱️ **[0:00 — Intro & Agenda](https://www.youtube.com/watch?v=1303vgwI8x8&t=0s)** — High-level preview of template generation types.
+* ⏱️ **[0:55 — Copy Generation Type Demo](https://www.youtube.com/watch?v=1303vgwI8x8&t=55s)** — Live demonstration of static file copying and assets generation.
+* ⏱️ **[6:34 — One Generation Type Demo](https://www.youtube.com/watch?v=1303vgwI8x8&t=394s)** — How to configure and scaffold exactly one source file per database table.
+* ⏱️ **[10:27 — Many Generation Type Demo](https://www.youtube.com/watch?v=1303vgwI8x8&t=627s)** — Advanced multi-file scaffolding driven by complex database table relationships.
+
 
 > [!IMPORTANT]
 > **Understanding Path Resolution in `many` mode:**

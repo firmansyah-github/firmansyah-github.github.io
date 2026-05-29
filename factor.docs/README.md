@@ -180,11 +180,15 @@ After receiving your license key file from the Factor Support Team, activate it 
 
 ## 🎓 Mastering the Advanced Editor Features
 
-To transform yourself from a developer into a rapid-prototyping wizard, we have created an in-depth video masterclass. This video will guide you through advanced model and template engineering:
+To transform yourself from a developer into a rapid-prototyping wizard, we have created comprehensive video guides. These videos will guide you through advanced model and template engineering, as well as the powerful autocomplete capabilities of the FreeMarker Factor Editor.
+
+### 🎥 Video 1: Advanced Model & Template Engineering (46 min)
+
+This in-depth masterclass covers advanced model configurations, schema linking, template mappings, and XML scaffolding customizations.
 
 📺 **[Watch The Factor Masterclass Video (46 min)](https://youtu.be/jFHrv93ieGQ)**
 
-### 🧭 Video Chapters & Navigation Map
+#### 🧭 Video Chapters & Navigation Map
 
 Skip directly to the specific topic you need using these synchronized timeline links:
 
@@ -197,6 +201,47 @@ Skip directly to the specific topic you need using these synchronized timeline l
 * ⏱️ **[24:43 — Template Editor: Template Configuration](https://www.youtube.com/watch?v=jFHrv93ieGQ&t=1483s)** — Linking FreeMarker directives, macro libraries, and source files.
 * ⏱️ **[30:04 — Template Editor: Placeholder Configurations](https://www.youtube.com/watch?v=jFHrv93ieGQ&t=1804s)** — Utilizing dynamic placeholder keys for runtime injection.
 * ⏱️ **[46:33 — XML Snippets & Custom Editors](https://www.youtube.com/watch?v=jFHrv93ieGQ&t=2793s)** — Extending the generator using customizable XML schemas.
+
+---
+
+### 🎥 Video 2: FreeMarker Factor Editor & Content Assist (17 min)
+
+This professional-grade masterclass provides an exhaustive look into the **FreeMarker Factor Editor**—specifically focusing on the editor's advanced productivity boosters. You will learn how to leverage powerful content assist features, autocomplete subroutines, insert custom snippets, and streamline template authoring with directives.
+
+📺 **[Watch the FreeMarker Factor Editor Masterclass (17 min)](https://www.youtube.com/watch?v=N4v91GyLumw)**
+
+#### 🧭 Video Chapters & Navigation Map
+
+Skip directly to the specific topic you need using these synchronized timeline links:
+
+* ⏱️ **[0:00 — Agenda of This Video Content](https://www.youtube.com/watch?v=N4v91GyLumw&t=0s)** — Preview of what is covered in this editor masterclass.
+* ⏱️ **[0:52 — FreeMarker Overview](https://www.youtube.com/watch?v=N4v91GyLumw&t=52s)** — Contextual foundation on the Apache FreeMarker template engine.
+* ⏱️ **[1:19 — FreeMarker Factor Editor Overview](https://www.youtube.com/watch?v=N4v91GyLumw&t=79s)** — Touring the layout and workspace files within the Eclipse template editor.
+* ⏱️ **[3:13 — Predefined Subroutines Content Assist](https://www.youtube.com/watch?v=N4v91GyLumw&t=193s)** — Leveraging built-in filters (like casing) using hotkeys (`Ctrl + Space`).
+* ⏱️ **[4:11 — User Defined Subroutines Content Assist](https://www.youtube.com/watch?v=N4v91GyLumw&t=251s)** — Accessing custom database properties and field models dynamically.
+* ⏱️ **[5:12 — Directives Content Assist](https://www.youtube.com/watch?v=N4v91GyLumw&t=312s)** — Auto-completing standard `#` and custom `@` directives.
+* ⏱️ **[6:12 — The Factor Snippets](https://www.youtube.com/watch?v=N4v91GyLumw&t=372s)** — Bootstrapping code templates and layouts with pre-configured snippets.
+* ⏱️ **[9:48 — Factor: Predefined Subroutines](https://www.youtube.com/watch?v=N4v91GyLumw&t=588s)** — Deep dive into pre-packaged snippets helper tools for Predefined Subroutines.
+* ⏱️ **[13:34 — Factor: User Defined Subroutines](https://www.youtube.com/watch?v=N4v91GyLumw&t=814s)** — Hands-on examples mapping database schema properties using User Defined Subroutines snippets.
+* ⏱️ **[15:01 — Factor: Directives](https://www.youtube.com/watch?v=N4v91GyLumw&t=901s)** — Generating advanced loops and structures using Directives snippets.
+* ⏱️ **[16:35 — The End](https://www.youtube.com/watch?v=N4v91GyLumw&t=995s)** — Summary and recommendations for further mastering template generation.
+
+---
+
+### 🎥 Video 3: Template Generation Types — Copy, One & Many (11 min)
+
+This professional-grade masterclass focuses on the core **Generation Types (Copy, One, Many)** in the Factor Eclipse Plugin. You will learn the mechanical differences, configuration mappings, and see live demonstrations of static file copying (`Copy`), single-entity generation (`One`), and dynamic relation-driven scaffolding (`Many`).
+
+📺 **[Watch the Template Generation Types Masterclass (11 min)](https://www.youtube.com/watch?v=1303vgwI8x8)**
+
+#### 🧭 Video Chapters & Navigation Map
+
+Skip directly to the specific topic you need using these synchronized timeline links:
+
+* ⏱️ **[0:00 — Intro & Agenda](https://www.youtube.com/watch?v=1303vgwI8x8&t=0s)** — High-level preview of template generation types.
+* ⏱️ **[0:55 — Copy Generation Type Demo](https://www.youtube.com/watch?v=1303vgwI8x8&t=55s)** — Live demonstration of static file copying and assets generation.
+* ⏱️ **[6:34 — One Generation Type Demo](https://www.youtube.com/watch?v=1303vgwI8x8&t=394s)** — How to configure and scaffold exactly one source file per database table.
+* ⏱️ **[10:27 — Many Generation Type Demo](https://www.youtube.com/watch?v=1303vgwI8x8&t=627s)** — Advanced multi-file scaffolding driven by complex database table relationships.
 
 ---
 
