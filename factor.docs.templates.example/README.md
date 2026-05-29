@@ -167,21 +167,59 @@ Unlock the true power of automated models, architecture layers, packages, and pa
 
 ---
 
-## 🛠️ Step-by-Step: How to Explore & Test in Eclipse IDE
+## 🛠️ Step-by-Step: How to Explore, Customize & Execute Scaffolding in Eclipse IDE
 
-Get hands-on in your active workspace and experience real-time Content Assist:
+Experience a fluid, high-productivity scaffolding loop. Follow this detailed step-by-step masterclass to set up your templates, configure settings, utilize autocomplete, modify attributes, and execute your first enterprise generation run.
 
-### Step 1: Open the FTL Template Editor
-1. In your **Eclipse IDE**, locate the **Templates explorer** in your workspace.
-2. Double-click any of the blueprint files listed above (e.g., [`factor.predefined.subroutines.1.string.ftl`](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.docs.templates.example/factor.predefined.subroutines.1.string.ftl)).
+### 📋 Prerequisites & Quick Setup
 
-### Step 2: Trigger the Content Assist
-To explore predefined subroutines, variables, or system attributes:
-* **For String Helpers:** Place your cursor right after any `?` symbol and hit **`Ctrl + Space`** (or **`Cmd + Space`** on macOS).
-* **For Custom Database Elements:** Type **`${`** inside a template block and hit **`Ctrl + Space`** to watch the metadata assist list pop up.
+Before starting, ensure that you have downloaded the required blueprint assets:
+1. **Get the Blueprint Files:** Clone or download this repository locally. You will need the `.ftl` templates and the [`factor-config-example.xml`](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.docs.templates.example/factor-config-example.xml) file.
+2. **Launch Eclipse IDE:** Open your Eclipse workspace containing **The Factor Plugin** (see our standard [Installation Guide](../factor.docs/README.md#step-2-install-the-required-eclipse-plugins) if you haven't activated it yet).
+
+---
+
+### 🚀 Step 1: Directory Scanning & Output Configuration (Template Editor)
+
+The Template Editor is your centralized execution dashboard. It tells the generator where to find templates and where to write the generated source files:
+
+1. In Eclipse, navigate to the **The Factor Template Config** page/editor.
+2. **Configure the Template Directory:** Point the **Template Directory** path input to the local folder containing your downloaded `.ftl` blueprints. The plugin automatically scans this directory to discover and index your templates.
+3. **Configure the Output Directory:** Set the **Output Directory** path input to specify your generation target (e.g., your Quarkus or Spring Boot project directory, or a scratch folder).
+4. Save the configuration.
+
+> [!TIP]
+> **Video Guide Reference:** For a detailed visual walkthrough of this dashboard configuration, skip directly to:
+> 👉 **[Watch Video 1 — Template Editor: Directory Configuration (20:09)](https://www.youtube.com/watch?v=jFHrv93ieGQ&t=1209s)**
+
+---
+
+### 🗂️ Step 2: Manage Templates via the File List
+
+The Template Editor contains a dedicated **Template File List** table that allows you to control which templates are active:
+
+1. **Add FTL Blueprints:** Click the **Add** button next to the template registry table to register your new `.ftl` files.
+2. **Remove Blueprints:** If there are files you don't want to process during this generation run, simply select them and click **Remove**.
+3. **Review Mappings:** For each active template, verify the **Target Path**, **Package Mapping**, and **Generation Types** (`copy`, `one`, or `many`).
+
+> [!TIP]
+> **Video Guide Reference:** To see how to manage and map individual templates, refer to:
+> 👉 **[Watch Video 1 — Template Editor: Template Configuration (24:43)](https://www.youtube.com/watch?v=jFHrv93ieGQ&t=1483s)**
+
+---
+
+### 💻 Step 3: Open Templates & Leverage Autocomplete (Content Assist)
+
+Writing custom generation logic is incredibly fast thanks to the integrated **FreeMarker Factor Editor**:
+
+1. **Open the Editor:** Double-click any `.ftl` template file in your Eclipse workspace project explorer. It will launch inside the enhanced FTL editor with full syntax highlighting.
+2. **Trigger autocomplete with `Ctrl + Space` (or `Cmd + Space` on macOS):**
+   * **For Predefined Subroutines:** Type **`?`** inside an interpolation and press `Ctrl + Space` to access standard string/list/date helpers (e.g., `?cap_first`, `?lower_case`).
+   * **For User-Defined Database Metadata:** Type **`${`** and press `Ctrl + Space` to inspect dynamic database fields, tables, primary/foreign keys, and system targets.
+   * **For Logical Directives:** Type **`#`** (standard FTL tags like `<#list>`, `<#if>`) or **`@`** (custom Factor generator macros) followed by `Ctrl + Space`.
 
 ```freemarker
-<#-- Real-world Snippet from factor.user.defined.subroutines.4.ftl -->
+<#-- Real-world Snippet from factor.user.defined.subroutines.4.entity.field.pk.fk.ftl -->
 <#list tables as table>
   public class ${table.className} {
     <#list table.fields as field>
@@ -190,6 +228,49 @@ To explore predefined subroutines, variables, or system attributes:
   }
 </#list>
 ```
+
+> [!TIP]
+> **Video Guide Reference:** Watch the complete FreeMarker Factor Editor autocomplete features in action:
+> * ⏱️ **[Video 2 — Predefined Subroutines Assist (03:13)](https://www.youtube.com/watch?v=N4v91GyLumw&t=193s)**
+> * ⏱️ **[Video 2 — User Defined Subroutines Assist (04:11)](https://www.youtube.com/watch?v=N4v91GyLumw&t=251s)**
+> * ⏱️ **[Video 2 — Logical Directives Assist (05:12)](https://www.youtube.com/watch?v=N4v91GyLumw&t=312s)**
+
+---
+
+### 📐 Step 4: Modify Generation Attributes & Placeholders
+
+The Factor allows you to configure placeholders and parameters using two separate mechanisms depending on your preference:
+
+#### Option A: Direct FTL Template Modifications
+Open your FTL template file inside the FreeMarker editor and modify the dynamic placeholders directly inside the code (e.g., changing string formats, loops, or condition scopes using standard FTL directives).
+
+#### Option B: Public & Private Attribute Editors (No Coding Required)
+To adjust generator-level configurations visually without editing code:
+1. Open the **The Factor Public/Private Attribute Editors** inside your Eclipse preference workspace.
+2. **Public Attributes Editor:** Modify project-wide settings like `basePackageName`, `authorName`, or database type mappings (`int4` ➡️ `Integer`) through a clean, tabular configuration panel.
+3. **Private Attributes Editor:** Configure file-specific properties (e.g., setting a template's `PRV_SYS_GEN_TYPE` to `many`, custom target file suffixes, or encoding rules).
+
+> [!TIP]
+> **Video Guide Reference:** For step-by-step guides on configuring attributes, mappings, and placeholders:
+> * ⏱️ **[Video 1 — Model Editor: Field Configuration & Type Mappings (16:50)](https://www.youtube.com/watch?v=jFHrv93ieGQ&t=1010s)**
+> * ⏱️ **[Video 1 — Template Editor: Placeholder Configurations (30:04)](https://www.youtube.com/watch?v=jFHrv93ieGQ&t=1804s)**
+
+---
+
+### ⚙️ Step 5: Execute & Generate Scaffolding Code
+
+With templates scanned, output mapped, and metadata attributes defined, you are ready to compile:
+
+1. Verify your active JDBC Database connection in the **Model Editor** is active and connecting successfully to your target database.
+2. Click the **Generate** button on the main toolbar of your Factor Plugin page.
+3. The generation engine introspects the active database schema, processes the templates and macros using FreeMarker, and compiles them.
+4. **Inspect the Output:** Open your specified output directory. You will find the complete, beautifully formatted, compilation-safe source files (entities, DTOs, controllers, CI/CD scripts) organized precisely in their mapped packages!
+
+> [!TIP]
+> **Video Guide Reference:** Watch complete live execution runs for different generation modes:
+> * ⏱️ **[Video 3 — One Generation Type Live Run (06:34)](https://www.youtube.com/watch?v=1303vgwI8x8&t=394s)**
+> * ⏱️ **[Video 3 — Many Generation Type Live Run (10:27)](https://www.youtube.com/watch?v=1303vgwI8x8&t=627s)**
+
 
 ---
 
