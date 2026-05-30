@@ -39,8 +39,9 @@
       background-color: transparent;
       transition: background-color 0.2s ease, box-shadow 0.2s ease;
     }
-    
-    .sidebar-resizer:hover, .sidebar-resizer.is-dragging {
+
+    .sidebar-resizer:hover,
+    .sidebar-resizer.is-dragging {
       background-color: var(--theme-color);
       box-shadow: 0 0 8px var(--theme-color);
     }
@@ -105,10 +106,10 @@
     window.mermaid = mermaid;
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-mermaid@2.0.1/dist/docsify-mermaid.js"></script>
-  
+
   <!-- Draggable Sidebar Resizer -->
   <script>
-    (function() {
+    (function () {
       // Load saved width from localStorage on startup
       const savedWidth = localStorage.getItem('sidebar-width');
       if (savedWidth) {
@@ -123,7 +124,7 @@
 
         let isDragging = false;
 
-        resizer.addEventListener('mousedown', function(e) {
+        resizer.addEventListener('mousedown', function (e) {
           isDragging = true;
           resizer.classList.add('is-dragging');
           document.body.style.cursor = 'col-resize';
@@ -131,9 +132,9 @@
           e.preventDefault();
         });
 
-        document.addEventListener('mousemove', function(e) {
+        document.addEventListener('mousemove', function (e) {
           if (!isDragging) return;
-          
+
           const minWidth = 200;
           const maxWidth = 800;
           let newWidth = e.clientX;
@@ -145,7 +146,7 @@
           localStorage.setItem('sidebar-width', widthStr);
         });
 
-        document.addEventListener('mouseup', function() {
+        document.addEventListener('mouseup', function () {
           if (isDragging) {
             isDragging = false;
             resizer.classList.remove('is-dragging');
