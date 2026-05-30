@@ -18,10 +18,37 @@
       --sidebar-width: 24rem;
     }
 
-    /* Make the logo fit nicely */
+    /* Make the logo fit nicely and maintain size during resizes */
     .app-name-link img {
-      width: 100%;
-      max-width: 180px;
+      width: 180px !important;
+      height: auto !important;
+      max-width: 100% !important;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Sidebar resizer handle */
+    .sidebar-resizer {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: calc(var(--sidebar-width) - 3px);
+      width: 6px;
+      cursor: col-resize;
+      z-index: 9999;
+      background-color: transparent;
+      transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .sidebar-resizer:hover, .sidebar-resizer.is-dragging {
+      background-color: var(--theme-color);
+      box-shadow: 0 0 8px var(--theme-color);
+    }
+
+    @media (max-width: 768px) {
+      .sidebar-resizer {
+        display: none !important;
+      }
     }
   </style>
 </head>
@@ -78,6 +105,63 @@
     window.mermaid = mermaid;
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-mermaid@2.0.1/dist/docsify-mermaid.js"></script>
+  
+  <!-- Draggable Sidebar Resizer -->
+  <script>
+    (function() {
+      // Load saved width from localStorage on startup
+      const savedWidth = localStorage.getItem('sidebar-width');
+      if (savedWidth) {
+        document.documentElement.style.setProperty('--sidebar-width', savedWidth);
+      }
+
+      function initResizer() {
+        const resizer = document.createElement('div');
+        resizer.className = 'sidebar-resizer';
+        resizer.id = 'sidebar-resizer';
+        document.body.appendChild(resizer);
+
+        let isDragging = false;
+
+        resizer.addEventListener('mousedown', function(e) {
+          isDragging = true;
+          resizer.classList.add('is-dragging');
+          document.body.style.cursor = 'col-resize';
+          document.body.style.userSelect = 'none';
+          e.preventDefault();
+        });
+
+        document.addEventListener('mousemove', function(e) {
+          if (!isDragging) return;
+          
+          const minWidth = 200;
+          const maxWidth = 800;
+          let newWidth = e.clientX;
+          if (newWidth < minWidth) newWidth = minWidth;
+          if (newWidth > maxWidth) newWidth = maxWidth;
+
+          const widthStr = newWidth + 'px';
+          document.documentElement.style.setProperty('--sidebar-width', widthStr);
+          localStorage.setItem('sidebar-width', widthStr);
+        });
+
+        document.addEventListener('mouseup', function() {
+          if (isDragging) {
+            isDragging = false;
+            resizer.classList.remove('is-dragging');
+            document.body.style.cursor = '';
+            document.body.style.userSelect = '';
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initResizer);
+      } else {
+        initResizer();
+      }
+    })();
+  </script>
 </body>
 
 </html>

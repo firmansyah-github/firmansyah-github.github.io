@@ -1,4 +1,4 @@
-# The Art of Introspected Generation: Enterprise Guide to Reusable AI Prompts & Extensions for The Factor
+# 🪄 The Art of Introspected Generation: Enterprise Guide to Reusable AI Prompts & Extensions for The Factor
 
 Welcome, Architect! You are holding the master key to **The Factor** (Firmansyah Advanced CRUD Generator)—a robust, high-performance, Eclipse-based code generation engine powered by **Apache FreeMarker 2.3.26**.
 
@@ -6,7 +6,7 @@ To generate flawless, syntactically perfect, production-grade `.ftl` templates f
 
 ---
 
-## 1. The Story: Why Structured Prompts & Extensions Matter
+## 📖 1. The Story: Why Structured Prompts & Extensions Matter
 
 Generic AI prompts produce generic, broken templates. FreeMarker is highly strict about types, null-checks, and syntax constraints. If an AI assistant does not know that:
 * Every boolean in FreeMarker **must** be rendered using `${variable?c}` to avoid runtime rendering exceptions,
@@ -32,11 +32,11 @@ By separating the core engine data models from language-specific quirks, the pro
 
 ---
 
-## 2. Ingesting prompts in the Top 5 AI Coding Platforms
+## 🚀 2. Ingesting Prompts in the Top 5 AI Coding Platforms
 
 To maximize the power of this system, you must feed these files into your favorite AI environments as context. Here is exactly how to do it across the major 5 AI coding tools.
 
-### 2.1. Cursor
+### 🤖 2.1. Cursor
 Cursor is a premium, developer-focused IDE featuring deep context integrations.
 
 * **How to configure**:
@@ -46,7 +46,7 @@ Cursor is a premium, developer-focused IDE featuring deep context integrations.
      > *"Generate a FreeMarker template for a REST controller using @factor.ai.prompt.basic.md and @factor.ai.prompt.extension.java.md"*
   4. Use **Composer** (Cmd + I) in multi-file mode, pinning the prompt files to ensure the engine rules guide the generation.
 
-### 2.2. GitHub Copilot & Copilot Chat
+### 🐱 2.2. GitHub Copilot & Copilot Chat
 GitHub Copilot is the industry standard for inline completions and contextual chat inside VS Code or JetBrains.
 
 * **How to configure**:
@@ -58,7 +58,7 @@ GitHub Copilot is the industry standard for inline completions and contextual ch
   3. In **Copilot Chat**, reference the prompt files directly using the `#file` command:
      > *"Explain how to fetch primary keys in FreeMarker based on `#file:factor.ai.prompt.basic.md`"*
 
-### 2.3. Windsurf
+### 🌊 2.3. Windsurf
 Windsurf is the first agentic IDE, providing a powerful collaborative flow using "Cascade".
 
 * **How to configure**:
@@ -70,7 +70,7 @@ Windsurf is the first agentic IDE, providing a powerful collaborative flow using
      ```
   4. Cascade's agent will write the file, validate the syntax rules, and handle directory pathing automatically.
 
-### 2.4. Claude Projects (Anthropic)
+### 🧠 2.4. Claude Projects (Anthropic)
 Claude Projects allow users to build highly targeted sandboxes with curated knowledge bases.
 
 * **How to configure**:
@@ -84,7 +84,7 @@ Claude Projects allow users to build highly targeted sandboxes with curated know
      ```
   4. Use the chat window to generate production-grade FTLs instantly.
 
-### 2.5. Google AI Studio & Gemini Advanced
+### ♊ 2.5. Google AI Studio & Gemini Advanced
 Gemini's massive multi-million token context window allows you to upload entire codebases alongside instructions.
 
 * **How to configure**:
@@ -95,11 +95,11 @@ Gemini's massive multi-million token context window allows you to upload entire 
 
 ---
 
-## 3. How to Create an AI Prompt Extension
+## 🛠️ 3. How to Create an AI Prompt Extension
 
 When you need to support a new language, web framework, or database system, you must create a new **L1 Extension Cookbook**. 
 
-### 3.1. The Golden Rules of Extension Design
+### 🌟 3.1. The Golden Rules of Extension Design
 To keep your extensions fully reusable and standardized, follow these four rules:
 1. **Never redefine L0 engine attributes**: Do not rename `${entity.tableName}` or `${field.fieldName}`. Let the core handles remain untouched.
 2. **Explicit Type Mapping block**: Every extension must supply a copy-pasteable `PUB_SYS_DTM` block inside a FreeMarker comment. This allows the generator engine to programmatically rewrite types before parsing.
@@ -110,7 +110,7 @@ To keep your extensions fully reusable and standardized, follow these four rules
 
 ---
 
-### 3.2. Step-by-Step Blueprint for Creating a New Extension
+### 📋 3.2. Step-by-Step Blueprint for Creating a New Extension
 
 Copy the template below to create extensions for languages like TypeScript, Go, Python, C#, or Rust.
 
@@ -155,7 +155,7 @@ Create fully functional FreeMarker examples illustrating:
 
 ---
 
-## 4. Best Practices for Perfect FreeMarker Syntax
+## ✍️ 4. Best Practices for Perfect FreeMarker Syntax
 
 When writing templates with the help of your AI assistant, always double-check these critical syntactical details to prevent runtime failures:
 
@@ -172,7 +172,7 @@ When writing templates with the help of your AI assistant, always double-check t
 
 ---
 
-## 5. Summary Checklist for Template Generation
+## ✅ 5. Summary Checklist for Template Generation
 
 Before submitting a generated template to **The Factor** workspace:
 1. **Comment Headers**: Are your `PRV_SYS_` attributes declared in a pipe-delimited format in the top comment block?

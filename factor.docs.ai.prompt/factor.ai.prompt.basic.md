@@ -1,10 +1,10 @@
-# Reusable AI Prompt: Core FreeMarker Data Model & Code Generation Engine Specification
+# 🧠 Reusable AI Prompt: Core FreeMarker Data Model & Code Generation Engine Specification
 
 You are an expert AI coding assistant specializing in generating FreeMarker (`.ftl`) templates for high-performance, automatic code generation. Use this comprehensive, language-agnostic, and lossless specification of the code generation engine's data model, execution contexts, system variables, and operational constraints to synthesize flawless, syntactically correct `.ftl` templates for any target programming language or configuration format.
 
 ---
 
-## 1. System Context & Key Terminology
+## 🌍 1. System Context & Key Terminology
 
 **The Factor** (Firmansyah Advanced CRUD Generator) is an Eclipse-based code generation tool that uses **Apache FreeMarker 2.3.26** as its template engine. It reads database metadata (tables, columns, primary keys, foreign keys) via JDBC and exposes the metadata as a rich, language-agnostic data model to FreeMarker `.ftl` template files. Templates are processed to generate source code files (classes, SQL scripts, configuration files, documentation) for any database-driven application.
 
@@ -24,9 +24,9 @@ You are an expert AI coding assistant specializing in generating FreeMarker (`.f
 
 ---
 
-## 2. Core Data Model Reference
+## 🗃️ 2. Core Data Model Reference
 
-### 2.1. Database Connection Object (`dbs`)
+### 🔌 2.1. Database Connection Object (`dbs`)
 The `dbs` object exposes JDBC connection parameters, schema configurations, and metadata from the database driver.
 
 #### A. Scalar Properties (Access via `${dbs.propertyName}`)
@@ -62,7 +62,7 @@ These mutators can programmatically change properties on the backing database co
 
 ---
 
-### 2.2. Advanced Configuration Object (`adv`)
+### ⚙️ 2.2. Advanced Configuration Object (`adv`)
 The `adv` object is the root domain container for application generation settings, templates, maps, and entity models.
 
 #### A. Build Metadata
@@ -155,14 +155,14 @@ Exposes metadata of all registered file templates in the generation registry.
 
 ---
 
-## 3. Entity Data Model Object (`entity` or `ents`)
+## 📁 3. Entity Data Model Object (`entity` or `ents`)
 
 The entity model is the primary data source representing database tables converted to logical, object-oriented structures. Access it in templates via:
 1. Iterating `adv.entities` (where each item is an entity).
 2. Iterating `ents` (an alias/shorthand array of `adv.entities`).
 3. Accessing the single `entity` object directly (when in a context bound to a single table, e.g., in a `many` generation job).
 
-### 3.1. Scalar Properties (Access via `${entity.propertyName}`)
+### 🏷️ 3.1. Scalar Properties (Access via `${entity.propertyName}`)
 * `${entity.tableName}` – Exact database table name (e.g., `user_profiles`).
 * `${entity.baseName}` – Lowercase logical name (e.g., `userprofile`).
 * `${entity.className}` – PascalCase target-compliant naming representation (e.g., `UserProfile`).
@@ -194,7 +194,7 @@ The entity model is the primary data source representing database tables convert
 
 ---
 
-### 3.2. Foreign Key Relationships
+### 🔗 3.2. Foreign Key Relationships
 * `entity.exportedKeys` – Lists foreign keys where *this* table is the parent (referenced by other tables).
 * `entity.importedKeys` – Lists foreign keys where *this* table is the child (referencing other tables).
 
@@ -220,7 +220,7 @@ Both collections contain identical key objects structured as follows:
 
 ---
 
-### 3.3. Entity Field Lists
+### 📋 3.3. Entity Field Lists
 An entity exposes multiple pre-filtered, utility collections of its table fields:
 * `entity.fieldList` – Every column present in the database table.
 * `entity.primaryKeyFieldList` – Columns marked exclusively as Primary Keys.
@@ -235,7 +235,7 @@ An entity exposes multiple pre-filtered, utility collections of its table fields
 
 ---
 
-### 3.4. Field Object Attributes
+### 💎 3.4. Field Object Attributes
 Every column inside the field lists resolves to a `Field` object containing rich database-to-logical parameters:
 
 #### A. Core Field Metadata
@@ -280,7 +280,7 @@ Every column inside the field lists resolves to a `Field` object containing rich
 
 ---
 
-### 3.5. Import & Module Declarations
+### 📦 3.5. Import & Module Declarations
 These collections are used to automatically track packages, imports, or modules required by column types:
 * `entity.importClassNameList` – A list of fully-qualified namespace class paths required by this entity's columns.
 * `entity.importDeclarations` – Complete pre-formatted import statements (e.g. `import java.time.LocalDateTime;`).
@@ -292,11 +292,11 @@ ${import}
 
 ---
 
-## 4. File Generation Control & Private System Attributes (`PRV_SYS_`)
+## 🎛️ 4. File Generation Control & Private System Attributes (`PRV_SYS_`)
 
 The file generation engine relies on **Private System Attributes** declared inside the FreeMarker template's comment block at the top of the file to orchestrate output pathing, overwrite behaviors, packaging, and structural patterns.
 
-### 4.1. Declaration Syntax
+### 🔢 4.1. Declaration Syntax
 Private system attributes are declared in standard FreeMarker comments (`<#-- ... -->`) using a strict **pipe-delimited format**:
 ```ftl
 <#-- 
@@ -306,7 +306,7 @@ ${PRV_SYS_VARIABLE_NAME|defaultValue|Detailed explanation of purpose}
 > [!IMPORTANT]
 > The engine scans and parses these comments *prior* to rendering. Make sure the value field does not contain dynamic FreeMarker `${}` expressions.
 
-### 4.2. Core System Attributes
+### 🔑 4.2. Core System Attributes
 The generation engine recognizes five core private system attributes:
 
 | Attribute Name | Purpose | Acceptable Values / Formats | Default (if omitted) |
@@ -319,7 +319,7 @@ The generation engine recognizes five core private system attributes:
 
 ---
 
-### 4.3. Dynamic Path Placeholders
+### 🔄 4.3. Dynamic Path Placeholders
 When creating templates with `PRV_SYS_GEN_TYPE = 'many'` or `PRV_SYS_GEN_TYPE = 'one'`, the paths defined in `PRV_SYS_GEN_PATH`, `PRV_SYS_GEN_FILENAME`, and `PRV_SYS_JAVA_PACKAGE` dynamically substitute the following tokens using values from the active database entity context:
 
 | Placeholder Token | Resolved Property | Target Output Example |
@@ -331,7 +331,7 @@ When creating templates with `PRV_SYS_GEN_TYPE = 'many'` or `PRV_SYS_GEN_TYPE = 
 
 ---
 
-### 4.4. Generation Strategies & Engine Rules
+### 🛤️ 4.4. Generation Strategies & Engine Rules
 
 #### A. Copy Strategy (`PRV_SYS_GEN_TYPE|copy`)
 * **Purpose**: Performs a raw file or recursive directory copy from template repository to target destination.
@@ -359,11 +359,11 @@ $$\text{Output Location} = \text{[Deployment Root]} + \text{[PRV\_SYS\_GEN\_PATH
 
 ---
 
-## 5. Public System Data Type Mapping (`PUB_SYS_DTM`)
+## 🔄 5. Public System Data Type Mapping (`PUB_SYS_DTM`)
 
 The engine provides an automated data-type mapping system that translates database-specific column data types into logical programming language equivalents before the rendering process starts.
 
-### 5.1. Mapping Declaration Syntax
+### 🔢 5.1. Mapping Declaration Syntax
 DataType mappings are public system attributes declared in comments using an `@` syntax:
 ```ftl
 <#-- ${PUB_SYS_DTM@dbDataType|targetLanguageType|Description of mapping} -->
@@ -376,11 +376,11 @@ DataType mappings are public system attributes declared in comments using an `@`
 
 ---
 
-## 6. Public (`PUB_`) & Private (`PRV_`) Custom Attributes
+## 🏷️ 6. Public (`PUB_`) & Private (`PRV_`) Custom Attributes
 
 Templates support defining custom global variables (Public) or template-isolated parameters (Private) using structural comments.
 
-### 6.1. Declaration & Usage Rules
+### 🎚️ 6.1. Declaration & Usage Rules
 
 #### A. Public Custom Attributes
 Declared globally inside templates using:
@@ -413,9 +413,9 @@ Below are standard environment parameters available globally:
 
 ---
 
-## 7. Complete FreeMarker Syntax Reference (Version 2.3.26)
+## ✍️ 7. Complete FreeMarker Syntax Reference (Version 2.3.26)
 
-### 7.1. Variable Output & String Manipulation
+### 🔤 7.1. Variable Output & String Manipulation
 ```freemarker
 ${variable}                      <#-- Output variable value -->
 ${variable!'default'}            <#-- Output with default if null -->
@@ -434,7 +434,7 @@ ${variable?trim}                 <#-- Trim leading/trailing whitespace -->
 ${variable?string("yes","no")}   <#-- Boolean to custom string mapping -->
 ```
 
-### 7.2. Conditional Logic
+### 🔀 7.2. Conditional Logic
 ```freemarker
 <#if condition>
   content
@@ -445,7 +445,7 @@ ${variable?string("yes","no")}   <#-- Boolean to custom string mapping -->
 </#if>
 ```
 
-### 7.3. List Iteration & Loop Helpers
+### 🔁 7.3. List Iteration & Loop Helpers
 ```freemarker
 <#list collection as item>
   ${item?counter}: ${item.property}
@@ -457,14 +457,14 @@ ${variable?string("yes","no")}   <#-- Boolean to custom string mapping -->
 </#list>
 ```
 
-### 7.4. Variable Assignments
+### 📌 7.4. Variable Assignments
 ```freemarker
 <#assign myVar = "value">
 <#assign myList = ["a", "b", "c"]>
 <#assign myHash = {"key1": "val1", "key2": "val2"}>
 ```
 
-### 7.5. Macros & Reusable Functions
+### 📦 7.5. Macros & Reusable Functions
 ```freemarker
 <#macro myMacro param1 param2="default">
   Output: ${param1}, ${param2}
@@ -477,21 +477,21 @@ ${variable?string("yes","no")}   <#-- Boolean to custom string mapping -->
 ${myFunc(1, 2)}
 ```
 
-### 7.6. Include & Import Statements
+### 📥 7.6. Include & Import Statements
 ```freemarker
 <#include "lib/myinclude.ftl">            <#-- Include another template inline -->
 <#import "lib/mylib.ftl" as lib>          <#-- Import library as namespace -->
 <@lib.myMacro param="value" />            <#-- Call namespace macro -->
 ```
 
-### 7.7. Escape Prevention (Literal Rendering)
+### 🛡️ 7.7. Escape Prevention (Literal Rendering)
 ```freemarker
 <#noparse>
   ${this.will.not.be.evaluated}   <#-- Renders literally as ${this.will.not.be.evaluated} -->
 </#noparse>
 ```
 
-### 7.8. Hash (Map) Iteration
+### 🗺️ 7.8. Hash (Map) Iteration
 ```freemarker
 <#list myHash as key, value>
   ${key}: ${value}
@@ -500,7 +500,7 @@ ${myFunc(1, 2)}
 
 ---
 
-## 8. Comprehensive Language-Agnostic Template Example
+## 📝 8. Comprehensive Language-Agnostic Template Example
 
 Below is a complete, syntactically perfect, production-grade template example implementing all core features of this specification to generate a generic database schema configuration report in Markdown:
 
@@ -553,7 +553,7 @@ No active Foreign Key relational constraints bind this entity.
 
 ---
 
-## 9. Final Checklist for AI Execution
+## ✅ 9. Final Checklist for AI Execution
 1. **Private Attribute comment block**: Always define generation configurations (`PRV_SYS_`) in a delimited comment block at the very top.
 2. **Boolean representation**: Ensure every single boolean output utilizes the `?c` modifier to prevent runtime format failures.
 3. **Map verification**: Prioritize using `fieldListSortByOrdinalPosition` or predefined lists (`fieldListExceptLob`) to speed up output creation.

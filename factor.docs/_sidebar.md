@@ -1,4 +1,4 @@
-* The Factor
+* **The Factor Core**
   * [Overview](/factor.docs.overview/README.md)
   * [Starter-kit](/factor.docs/README.md)
   * [Template Mindmap (Xmind)](/factor.docs.freemarker.xmind/README.md)
@@ -6,44 +6,12 @@
   * [Template Editor](/factor.docs.templates.editor/README.md)
   * [Template Blueprint Example](/factor.docs.templates.example/README.md)
 
-* **factor.docs.ai.prompt**
-  * [chatgpt](/factor.docs.ai.prompt/chatgpt.md)
-  * [claude.ai](/factor.docs.ai.prompt/claude.ai.md)
-  * [deepseek](/factor.docs.ai.prompt/deepseek.md)
-  * [factor.ai.prompt.basic.java](/factor.docs.ai.prompt/factor.ai.prompt.basic.java.md)
-  * [factor.ai.prompt.basic.java.v2](/factor.docs.ai.prompt/factor.ai.prompt.basic.java.v2.md)
-  * [factor.ai.prompt.basic](/factor.docs.ai.prompt/factor.ai.prompt.basic.md)
-  * [gemini](/factor.docs.ai.prompt/gemini.md)
-  * [gemini2](/factor.docs.ai.prompt/gemini2.md)
-  * [grok.com](/factor.docs.ai.prompt/grok.com.md)
-  * [perplexity.ai](/factor.docs.ai.prompt/perplexity.ai.md)
-  * [prompt copy](/factor.docs.ai.prompt/prompt%20copy.md)
-  * [prompt](/factor.docs.ai.prompt/prompt.md)
+* **AI Prompt & Extensions**
+  * [AI Integration & Extension Guide](/factor.docs.ai.prompt/factor.ai.prompt.guide.md)
+  * [L0: Core Specification (Language-Agnostic)](/factor.docs.ai.prompt/factor.ai.prompt.basic.md)
+  * [L1: Java & Relational Extension Cookbook](/factor.docs.ai.prompt/factor.ai.prompt.extension.java.md)
 
-* **factor.docs.article**
-  * [13 Spring Boot architectures](/factor.docs.article/01.%20Spring%20Boot%20Architecture/13%20Spring%20Boot%20architectures.md)
-  * [16 Spring Boot architectures](/factor.docs.article/01.%20Spring%20Boot%20Architecture/16%20Spring%20Boot%20architectures.md)
-  * [Clean Architecture](/factor.docs.article/01.%20Spring%20Boot%20Architecture/Clean%20Architecture.md)
-  * [Hexagonal Architecture](/factor.docs.article/01.%20Spring%20Boot%20Architecture/Hexagonal%20Architecture.md)
-  * [Java file set for a Hexagonal Architecture](/factor.docs.article/01.%20Spring%20Boot%20Architecture/Java%20file%20set%20for%20a%20Hexagonal%20Architecture.md)
-  * [Java files for a basic Layered Architecture (N-Tier-MVC) Spring Boot](/factor.docs.article/01.%20Spring%20Boot%20Architecture/Java%20files%20for%20a%20basic%20Layered%20Architecture%20%28N-Tier-MVC%29%20Spring%20Boot.md)
-  * [Spring Boot ecosystem](/factor.docs.article/01.%20Spring%20Boot%20Architecture/Spring%20Boot%20ecosystem.md)
-  * [Traditional Layered Architecture](/factor.docs.article/01.%20Spring%20Boot%20Architecture/Traditional%20Layered%20Architecture.md)
-  * [Tree views of package layouts for each of the 13 Spring Boot architectures](/factor.docs.article/01.%20Spring%20Boot%20Architecture/Tree%20views%20of%20package%20layouts%20for%20each%20of%20the%2013%20Spring%20Boot%20architectures.md)
-  * [Comprehensive list and categorization of major Java libraries and components in Vert.x](/factor.docs.article/02.%20Apache%20Vert.x/Comprehensive%20list%20and%20categorization%20of%20major%20Java%20libraries%20and%20components%20in%20Vert.x.md)
-  * [Quarkus libraries](/factor.docs.article/03.%20Quarkus/Quarkus%20libraries.md)
-  * [Micronaut framework](/factor.docs.article/04.%20Micronaut/Micronaut%20framework.md)
-  * [Helidon](/factor.docs.article/05.%20Helidon/Helidon.md)
-  * [Jakarta EE](/factor.docs.article/06.%20Jakarta%20EE/Jakarta%20EE.md)
-  * [Java frameworks: Spring Boot, Micronaut, Quarkus, Helidon, Jakarta EE, and Vert.x](/factor.docs.article/07.%20Comparison/Java%20frameworks%3A%20Spring%20Boot%2C%20Micronaut%2C%20Quarkus%2C%20Helidon%2C%20Jakarta%20EE%2C%20and%20Vert.x.md)
-  * [deepseek.clean.full.k8s](/factor.docs.article/08.%20K8s/deepseek.clean.full.k8s.md)
-  * [deepseek.setup.k8s](/factor.docs.article/08.%20K8s/deepseek.setup.k8s.md)
-  * [deepseek.setup.k8s.traffic](/factor.docs.article/08.%20K8s/deepseek.setup.k8s.traffic.md)
-  * [step-by-step setup guide for Colima + Kind + Lens on macOS (so you’ll have clusters + GUI ready)](/factor.docs.article/08.%20K8s/step-by-step%20setup%20guide%20for%20Colima%20%2B%20Kind%20%2B%20Lens%20on%20macOS%20%28so%20you%E2%80%99ll%20have%20clusters%20%2B%20GUI%20ready%29.md)
-  * [devto-article-generate-50k-lines](/factor.docs.article/content/devto-article-generate-50k-lines.md)
-  * [linkedin-article-template-vs-ai](/factor.docs.article/content/linkedin-article-template-vs-ai.md)
-
-* **factor.docs.templates.example**
-  * [Note](/factor.docs.templates.example/Note.md)
-  * [README](/factor.docs.templates.example/README.md)
+* **Articles**
+  * [🚀 Generate 50k Lines of Java in 5 Mins](/factor.docs.article/99.%20Promotion/devto-article-generate-50k-lines.md)
+  * [🤖 Template-Based Gen vs AI: Determinism Matters](/factor.docs.article/99.%20Promotion/linkedin-article-template-vs-ai.md)
 
