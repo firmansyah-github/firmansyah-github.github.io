@@ -4,14 +4,23 @@ You are an expert AI coding assistant specializing in generating FreeMarker (`.f
 
 ---
 
-## 1. System Instruction & Context
+## 1. System Context & Key Terminology
 
-When generating FreeMarker templates, act as a compiler-aware, domain-expert code generator. The generation engine parses your output `.ftl` templates by combining them with a rich data model containing database connection profiles, advanced settings, and database entity models. 
+**The Factor** (Firmansyah Advanced CRUD Generator) is an Eclipse-based code generation tool that uses **Apache FreeMarker 2.3.26** as its template engine. It reads database metadata (tables, columns, primary keys, foreign keys) via JDBC and exposes the metadata as a rich, language-agnostic data model to FreeMarker `.ftl` template files. Templates are processed to generate source code files (classes, SQL scripts, configuration files, documentation) for any database-driven application.
 
-You must strictly adhere to FreeMarker syntax, respect private system directives, implement null-safety, and output exact, production-ready templates.
+### Key Terminology
 
-> [!NOTE]
-> This is a core, language-agnostic prompt template. If generating templates for a specific language (e.g., Java, TypeScript, C++), please refer to the corresponding language-specific extension prompt for specific naming mappings, data type mappings (`PUB_SYS_DTM`), and code patterns.
+| Term | Meaning |
+| :--- | :--- |
+| **Entity** | A logical representation of a database table. Has properties like `baseName`, `className`, `tableName`, etc. |
+| **Field** | A logical representation of a database column. Has properties like `fieldName`, `fieldType`, `columnName`, `columnType`, etc. |
+| **ExportedKey** | A foreign key relationship where the current table's primary key is referenced by another table. |
+| **ImportedKey** | A foreign key relationship where the current table references another table's primary key. |
+| **Generation Type** | Controls how a template is processed: `one` (single output file), `many` (one output file per entity), or `copy` (copy as-is without processing). |
+| **Private System Attribute** | A reserved variable (e.g., `PRV_SYS_GEN_TYPE`) declared in template comments using pipe-delimited syntax that controls generation behavior. |
+| **Public Attribute** | A user-defined variable (e.g., `PUB_DB_TYPE`) shared across all templates for project-level configuration. |
+| **Private Attribute** | A user-defined variable (e.g., `PRV_TABLE_PREFIX`) scoped strictly to a single template file. |
+| **Data Type Mapping** | A system that maps database column types to target programming types (e.g., DB `integer` → target type `Integer` or `int`). |
 
 ---
 
@@ -363,8 +372,7 @@ DataType mappings are public system attributes declared in comments using an `@`
 * `targetLanguageType` – Logical programming language type representing the column in generated code.
 
 > [!NOTE]
-> **Dynamic Mutation Rule**: When the engine resolves `PUB_SYS_DTM` tags in a template, it automatically traverses every entity in the collection and **directly overwrites** the `fieldType` attribute of all matching columns *before* FreeMarker begins rendering. This ensures that `${field.fieldType}` reflects your custom mappings seamlessly inside templates.
-> Mappings are only executed if `PRV_SYS_GEN_TYPE` is set to `one` or `many`.
+> **Dynamic Mutation Rule**: When the engine resolves `PUB_SYS_DTM` tags in a template, it automatically traverses every entity in the collection and **directly overwrites** the `fieldType` attribute of all matching columns *before* FreeMarker begins rendering. This mapping is only executed if `PRV_SYS_GEN_TYPE` is set to `one` or `many`.
 
 ---
 
@@ -405,42 +413,90 @@ Below are standard environment parameters available globally:
 
 ---
 
-## 7. FreeMarker Core Patterns & Best Practices
+## 7. Complete FreeMarker Syntax Reference (Version 2.3.26)
 
-### 7.1. Boolean Coercion
-FreeMarker does not coerce booleans to strings implicitly. **Always** append the `?c` built-in helper when rendering booleans to output files:
-```ftl
-isSelected = ${entity.selected?c} // Outputs: isSelected = true
+### 7.1. Variable Output & String Manipulation
+```freemarker
+${variable}                      <#-- Output variable value -->
+${variable!'default'}            <#-- Output with default if null -->
+${variable?c}                    <#-- Convert boolean to "true"/"false" string (Mandatory for booleans) -->
+${variable?has_content?c}        <#-- Check if variable has content and return boolean string -->
+${variable?datetime}             <#-- Format date/timestamp as datetime -->
+${variable?counter}              <#-- Loop counter (1-based, inside <#list> only) -->
+${variable?index}                <#-- Loop index (0-based, inside <#list> only) -->
+${variable?join(", ")}           <#-- Join list elements with separator -->
+${variable?cap_first}            <#-- Capitalize first letter of string -->
+${variable?lower_case}           <#-- Convert string to lowercase -->
+${variable?upper_case}           <#-- Convert string to uppercase -->
+${variable?length}               <#-- Get string length or list size -->
+${variable?replace("a", "b")}    <#-- String replacement -->
+${variable?trim}                 <#-- Trim leading/trailing whitespace -->
+${variable?string("yes","no")}   <#-- Boolean to custom string mapping -->
 ```
 
-### 7.2. Safe Null Handling
-Database schemas frequently contain null values. Ensure templates do not crash by providing default fallbacks:
-```ftl
-comment = "${field.remarks!''}"; // Falls back to empty string if null
-description = "${entity.remarks!'No documentation available'}"; // Custom default fallback
-```
-
-### 7.3. Dynamic Presence Checking
-Use `?has_content` combined with `?c` to execute logical conditionals safely:
-```ftl
-<#if adv.generation.superClassName?has_content>
-Extends class: ${adv.generation.superClassName}
+### 7.2. Conditional Logic
+```freemarker
+<#if condition>
+  content
+<#elseif other_condition>
+  other content
 <#else>
-Base Model Class (No parent)
+  default content
 </#if>
 ```
 
-### 7.4. Collection Iteration Guard
-Provide loop structures with formatting and indexing variables:
-```ftl
-<#list entity.fieldList as field>
-    Property: ${field.fieldName}
-    Type: ${field.fieldType}
-    <#if field_has_next>---</#if>
+### 7.3. List Iteration & Loop Helpers
+```freemarker
+<#list collection as item>
+  ${item?counter}: ${item.property}
+  <#if item?is_last>This is the last element</#if>
+  <#if item?is_first>This is the first element</#if>
+  <#sep>, </#sep>  <#-- Separator between items (not printed after last) -->
+<#else>
+  No items found in list   <#-- Fallback if collection is empty -->
 </#list>
 ```
-* `field_index` – Exposes current 0-based iteration index.
-* `field_has_next` – Returns boolean showing if subsequent elements exist.
+
+### 7.4. Variable Assignments
+```freemarker
+<#assign myVar = "value">
+<#assign myList = ["a", "b", "c"]>
+<#assign myHash = {"key1": "val1", "key2": "val2"}>
+```
+
+### 7.5. Macros & Reusable Functions
+```freemarker
+<#macro myMacro param1 param2="default">
+  Output: ${param1}, ${param2}
+</#macro>
+<@myMacro param1="value1" />
+
+<#function myFunc x y>
+  <#return x + y>
+</#function>
+${myFunc(1, 2)}
+```
+
+### 7.6. Include & Import Statements
+```freemarker
+<#include "lib/myinclude.ftl">            <#-- Include another template inline -->
+<#import "lib/mylib.ftl" as lib>          <#-- Import library as namespace -->
+<@lib.myMacro param="value" />            <#-- Call namespace macro -->
+```
+
+### 7.7. Escape Prevention (Literal Rendering)
+```freemarker
+<#noparse>
+  ${this.will.not.be.evaluated}   <#-- Renders literally as ${this.will.not.be.evaluated} -->
+</#noparse>
+```
+
+### 7.8. Hash (Map) Iteration
+```freemarker
+<#list myHash as key, value>
+  ${key}: ${value}
+</#list>
+```
 
 ---
 

@@ -1,20 +1,26 @@
-# AI Prompt Extension: Java & Database-Specific Specifications for The Factor
+# AI Prompt Extension: Java & Database-Specific Cookbook for The Factor
 
-This document is a formal **Java & Database Relational Extension** to the core, language-agnostic [factor.ai.prompt.basic.md](file:///Users/firmansyah.profess/factor-workspace/firmansyah-github.github.io/factor.docs.ai.prompt/factor.ai.prompt.basic.md). When tasked with generating FreeMarker templates specifically for Java classes, Spring Framework components, SQL DDL scripts, or related relational structures, combine this extension with the core specification.
+This document is the formal **Java & Database Relational Extension** to the core, language-agnostic [factor.ai.prompt.basic.md](https://github.com/firmansyah-github/firmansyah-github.github.io/blob/master/factor.docs.ai.prompt/factor.ai.prompt.basic.md). When tasked with generating FreeMarker templates specifically for Java classes, Spring Framework components, SQL DDL schema scripts, or related relational structures, combine this extension manual with the core specification.
 
 ---
 
-## 1. Java-Specific Data Model Specifications
+## 1. System Integration Context for Java
+
+**The Factor** (Firmansyah Advanced CRUD Generator) is an Eclipse-based code generation tool that uses **Apache FreeMarker 2.3.26** to read database metadata via JDBC and output fully qualified Java components. By introspecting schema structures, the tool binds column properties directly to standard object-oriented structures, enabling rapid generation of high-quality enterprise microservices.
+
+---
+
+## 2. Java-Specific Data Model Specifications
 
 When compiling Java code templates, the logical properties defined in the core data model map to the following Java language conventions:
 
-### 1.1. Entity Object Naming Conventions
+### 2.1. Entity Object Naming Conventions
 * `${entity.className}` – PascalCase Java-compliant Class name (e.g., `UserProfile`).
 * `${entity.instanceName}` – camelCase Java-compliant instance or local variable name (e.g., `userProfile`).
 * `${entity.packageName!'null'}` – Root Java package name containing the generated file (may return a null string).
 * `${entity.fullPackageName}` – Full qualified dot-separated Java package path for the class.
 
-### 1.2. Java Dependency & Import Managers
+### 2.2. Java Dependency & Import Managers
 The code generation engine parses table structure requirements to auto-determine necessary classes to import:
 * `${entity.importClassNameList}` – Iterable list of short class wrapper names that require package imports (e.g., `BigDecimal`, `LocalDateTime`).
 * `${entity.importDeclarations}` – Complete pre-formatted Java import statements ready to place directly under package headers:
@@ -26,11 +32,11 @@ The code generation engine parses table structure requirements to auto-determine
 
 ---
 
-## 2. PostgreSQL-to-Java Enterprise Data Type Mapping (`PUB_SYS_DTM`)
+## 3. PostgreSQL-to-Java Enterprise Data Type Mapping (`PUB_SYS_DTM`)
 
 Use the public system data type mapping (`PUB_SYS_DTM`) directive inside the FreeMarker comment header of your templates to bind target database types to Java objects.
 
-### 2.1. Mapping Configuration Block
+### 3.1. Mapping Configuration Block
 To standardly map a PostgreSQL database schema to clean Enterprise Java wrappers, copy and paste this block into the comment section of your `.ftl` templates:
 
 ```freemarker
@@ -62,9 +68,31 @@ ${PUB_SYS_DTM@enum|String|Standard string fallback for enum types}
 -->
 ```
 
+### 3.2. Reference Database → Java Type Mapping Table
+Below is the default target JDBC code mapping table used by the generation engine:
+
+| DB Type | Java Type(s) | Category |
+| :--- | :--- | :--- |
+| `smallint` | `short`, `Short` | Numeric |
+| `integer` / `int4` | `int`, `Integer` | Numeric |
+| `bigint` / `int8` | `long`, `Long` | Numeric |
+| `decimal`, `numeric` | `BigDecimal` | Numeric |
+| `real` | `float`, `Float` | Numeric |
+| `double` | `double`, `Double` | Numeric |
+| `character`, `char`, `varchar`, `text` | `String` | Character |
+| `bytea` | `byte[]` | Binary |
+| `date` | `java.sql.Date`, `java.time.LocalDate` | Date/Time |
+| `time` | `java.sql.Time`, `java.time.LocalTime` | Date/Time |
+| `timestamp` | `java.time.LocalDateTime`, `java.sql.Timestamp` | Date/Time |
+| `interval` | `String` | Date/Time |
+| `boolean` | `boolean`, `Boolean` | Boolean |
+| `uuid` | `java.util.UUID` | UUID |
+| `json`, `jsonb` | `String` | JSON |
+| `enum` | `String` | Enum |
+
 ---
 
-## 3. Java-Specific System Generation Properties
+## 4. Java-Specific System Generation Properties
 
 These variables utilize the core private system attributes to handle packaging and directory creation tailored to Java builds:
 
@@ -78,7 +106,7 @@ These variables utilize the core private system attributes to handle packaging a
 
 ---
 
-## 4. End-to-End Java Generation Code Recipes
+## 5. End-to-End Java Generation Code Recipes
 
 ### Recipe 1: Standard Enterprise Java Entity Model (`many` type)
 Generates an independent, serialized POJO matching the introspected table structure:
