@@ -1,11 +1,3 @@
----
-title: "The 5-Minute 50k Line Challenge: Enterprise Guide to Deterministic Java Generation"
-published: true
-description: The ultimate guide to eliminating enterprise CRUD boilerplate. Learn why database-first, deterministic generation outperforms probabilistic AI for scalable, auditable, and production-grade architectures.
-tags: java, quarkus, springboot, codegen, productivity, softwarearchitecture
-cover_image: https://raw.githubusercontent.com/firmansyah-github/firmansyah-github.github.io/main/factor.index/hero.png
----
-
 # ⚡ The 5-Minute 50k Line Challenge: Enterprise Guide to Deterministic Java Generation
 
 Welcome, Architect! You are looking at the ultimate roadmap to eliminating **CRUD boilerplate** from your JVM codebases. 
