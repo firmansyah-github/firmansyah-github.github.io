@@ -16,6 +16,9 @@
   * [🚀 Generate 50k Lines of Java in 5 Mins](/factor.docs.article/99.%20Promotion/devto-article-generate-50k-lines.md)
   * [🤖 Template-Based Gen vs AI: Determinism Matters](/factor.docs.article/99.%20Promotion/linkedin-article-template-vs-ai.md)
 
+* **Projects**
+  * [PostgreSQL Schema Generator](/factor.docs.article/09.%20Database/firmansyah.factor.postgres.md)
+
 * **Support & Community**
   * [🌐 Main Website](https://firmansyah-github.github.io/)
   * [📖 Complete Documentation](https://firmansyah-github.github.io/factor.docs/#/)
