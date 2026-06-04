@@ -1,3 +1,9 @@
+> [!TIP]
+> **Project Overview & Source Repository**
+> This article is a documentation mirror of the [Factor PostgreSQL Automation Engine Repository](https://github.com/firmansyah-github/firmansyah.factor.postgres/blob/main/README.md). 
+> 
+> **Summary:** The `firmansyah.factor.postgres` project is an enterprise-grade proving ground that demonstrates the Factor Eclipse Plugin's raw capability in handling extreme database architectural complexity. It uses advanced Freemarker templates to deterministically generate comprehensive PostgreSQL schema scripts (handling all column types, PKs, FKs, and relationship structures) while providing a native Docker test suite to validate application layer adaptability.
+
 # ⚡ The Factor PostgreSQL Automation Engine
 
 **Enterprise-Grade Schema & CRUD Generation for Modern Data Architectures.**
