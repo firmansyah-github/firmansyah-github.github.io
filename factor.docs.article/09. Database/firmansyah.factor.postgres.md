@@ -71,7 +71,7 @@ cd script
 factor.bat deploy
 ```
 
-For complete usage instructions on container management, testing, and SQL execution, please refer to the [Factor Infrastructure Scripts Documentation](script/README.md).
+For complete usage instructions on container management, testing, and SQL execution, please refer to the [Factor Infrastructure Scripts Documentation](https://github.com/firmansyah-github/firmansyah.factor.postgres/blob/main/script/README.md).
 
 ---
 
