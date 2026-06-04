@@ -5,7 +5,7 @@
   * [Template Eclipse Snippet](/factor.docs.eclipse.snippets/README.md)
   * [Template Editor](/factor.docs.templates.editor/README.md)
   * [Template Blueprint Example](/factor.docs.templates.example/README.md)
-  * [PostgreSQL Schema Generator](https://github.com/firmansyah-github/firmansyah.factor.postgres)
+
 
 * **AI Prompt & Extensions**
   * [AI Integration & Extension Guide](/factor.docs.ai.prompt/factor.ai.prompt.guide.md)
