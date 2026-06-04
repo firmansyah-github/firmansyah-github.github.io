@@ -119,7 +119,7 @@ The core system uses global variables to dictate the target SQL dialect.
 To execute the generation pipeline and build your data access layers:
 
 1. **Define** your entity relationships in the primary mapping domain.
-2. **Execute** the `advCrudGenDomain` processor.
+2. **Execute** the **Factor Advanced CRUD Generator** process.
 3. **Deploy** the generated `.sql` files located in the `outputs/postgresql` directory directly to your CI/CD pipeline or migration tool (e.g., Flyway, Liquibase).
 
 > [!WARNING]
