@@ -82,7 +82,7 @@ Used as dynamic inputs across templates. Can be customized per project or enviro
 
 #### 📐 **Public Attribute Rules**
 
-1. **Pattern**: Use format `${PUB_XXXXX|VALUE|Description}`
+1. **Pattern**: Use format <#noparse>`${PUB_XXXXX|VALUE|Description}`</#noparse>
 
    * Customize `XXXXX` freely; keep `PUB_` prefix.
    * `VALUE` is the default value; `Description` is optional documentation.

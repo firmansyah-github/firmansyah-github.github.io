@@ -17,7 +17,7 @@ A. Database - Factor Subroutines -----------------------------------------------
 1. catalogs Expression or Script
 ====================                                                                                  
 <#noparse>
-<#list dbs.catalogs as i>                                                         
+<#list adv.database.catalogs as i>                                                         
   ${i?counter}: ${i}                                                                
 </#list> 
 </#noparse>
@@ -27,7 +27,7 @@ A. Database - Factor Subroutines -----------------------------------------------
 ====================
 1. catalogs RESULT
 ====================
-<#list dbs.catalogs as i>                                                         
+<#list adv.database.catalogs as i>                                                         
   ${i?counter}: ${i}                                                                
 </#list>     
 
@@ -35,7 +35,7 @@ A. Database - Factor Subroutines -----------------------------------------------
 2. schemas Expression or Script
 ====================   
 <#noparse>
-<#list dbs.schemas as i>                                                          
+<#list adv.database.schemas as i>                                                          
   ${i?counter}: ${i}                                                                
 </#list> 
 </#noparse> 
@@ -44,7 +44,7 @@ A. Database - Factor Subroutines -----------------------------------------------
 ====================
 2. schemas RESULT
 ====================
-<#list dbs.schemas as i>                                                          
+<#list adv.database.schemas as i>                                                          
   ${i?counter}: ${i}                                                                
 </#list>  
 
@@ -53,7 +53,7 @@ A. Database - Factor Subroutines -----------------------------------------------
 3. tableTypes Expression or Script
 ==================== 
 <#noparse>
-<#list dbs.tableTypes as i>                                                       
+<#list adv.database.tableTypes as i>                                                       
   ${i?counter}: ${i}                                                                
 </#list> 
 </#noparse>  
@@ -62,7 +62,7 @@ A. Database - Factor Subroutines -----------------------------------------------
 ====================
 3. tableTypes RESULT
 ====================
-<#list dbs.tableTypes as i>                                                       
+<#list adv.database.tableTypes as i>                                                       
   ${i?counter}: ${i}                                                                
 </#list>    
 
@@ -70,7 +70,7 @@ A. Database - Factor Subroutines -----------------------------------------------
 4. tableTypesList Expression or Script
 ==================== 
 <#noparse>
-<#list dbs.tableTypesList as i>                                                   
+<#list adv.database.tableTypesList as i>                                                   
   ${i?counter}: ${i}                                                                
 </#list> 
 </#noparse>  
@@ -79,36 +79,36 @@ A. Database - Factor Subroutines -----------------------------------------------
 ====================
 4. tableTypesList RESULT
 ====================
-<#list dbs.tableTypesList as i>                                                   
+<#list adv.database.tableTypesList as i>                                                   
   ${i?counter}: ${i}                                                                
 </#list>                          
 
 =====================================================================================================================
 Expression or Script   										-> RESULT
 =====================================================================================================================
-<#noparse>${dbs.catalog}</#noparse>                       	->  ${dbs.catalog}                                      
+<#noparse>${adv.database.catalog}</#noparse>                       	->  ${adv.database.catalog}                                      
                                                                                   
-<#noparse>${dbs.create?c}</#noparse>                       	->  ${dbs.create?c}
+<#noparse>${adv.database.create?c}</#noparse>                       	->  ${adv.database.create?c}
                                                                                   
-<#noparse>${dbs.driverClassName}</#noparse>                 ->  ${dbs.driverClassName}
+<#noparse>${adv.database.driverClassName}</#noparse>                 ->  ${adv.database.driverClassName}
                                                                                   
-<#noparse>${dbs.driverFile}</#noparse>                      ->  ${dbs.driverFile}
+<#noparse>${adv.database.driverFile}</#noparse>                      ->  ${adv.database.driverFile}
                                                                                   
-<#noparse>${dbs.name}</#noparse>                       		->  ${dbs.name}
+<#noparse>${adv.database.name}</#noparse>                       		->  ${adv.database.name}
                                                                                   
-<#noparse>${dbs.password}</#noparse>                       	->  ${dbs.password}
+<#noparse>${adv.database.password}</#noparse>                       	->  ${adv.database.password}
                                                                                   
-<#noparse>${dbs.profileName}</#noparse>                     ->  ${dbs.profileName}
+<#noparse>${adv.database.profileName}</#noparse>                     ->  ${adv.database.profileName}
                                                                                   
-<#noparse>${dbs.schema}</#noparse>                       	->  ${dbs.schema}
+<#noparse>${adv.database.schema}</#noparse>                       	->  ${adv.database.schema}
                                                                                   
-<#noparse>${dbs.tablePattern}</#noparse>                    ->  ${dbs.tablePattern}
+<#noparse>${adv.database.tablePattern}</#noparse>                    ->  ${adv.database.tablePattern}
                                                                                   
-<#noparse>${dbs.tableType}</#noparse>                       ->  ${dbs.tableType}
+<#noparse>${adv.database.tableType}</#noparse>                       ->  ${adv.database.tableType}
                                                                                   
-<#noparse>${dbs.url}</#noparse>                       		->  ${dbs.url}
+<#noparse>${adv.database.url}</#noparse>                       		->  ${adv.database.url}
                                                                                   
-<#noparse>${dbs.user}</#noparse>                       		->  ${dbs.user}
+<#noparse>${adv.database.user}</#noparse>                       		->  ${adv.database.user}
 
 
 =====================================================================================================================
@@ -122,8 +122,8 @@ Expression or Script   										-> RESULT
 1. catalog Expression or Script
 ====================                                                                                  
 <#noparse>
-${dbs.setCatalog('catalog')}
-${dbs.catalog} 
+${adv.database.setCatalog('catalog')}
+${adv.database.catalog} 
 </#noparse>
 
 	|||
@@ -136,8 +136,8 @@ ${dbs.catalog}
 2. create Expression or Script
 ====================                                                                                  
 <#noparse>
-${dbs.setCreate(true)}
-${dbs.create} 
+${adv.database.setCreate(true)}
+${adv.database.create} 
 </#noparse>
 
 	|||
@@ -145,16 +145,16 @@ ${dbs.create}
 ====================
 2. create RESULT
 ====================
-${dbs.setCreate(true)}
-${dbs.create?c} 
+${adv.database.setCreate(true)}
+${adv.database.create?c} 
 
     
 ===================
 3. name Expression or Script
 ====================                                                                                  
 <#noparse>
-${dbs.setName('name')}
-${dbs.name} 
+${adv.database.setName('name')}
+${adv.database.name} 
 </#noparse>
 
 	|||
@@ -162,8 +162,8 @@ ${dbs.name}
 ====================
 3. name RESULT
 ====================
-${dbs.setName('name')}
-${dbs.name} 
+${adv.database.setName('name')}
+${adv.database.name} 
 
     
         
@@ -171,8 +171,8 @@ ${dbs.name}
 4. password Expression or Script
 ====================                                                                                  
 <#noparse>
-${dbs.setPassword('password')}
-${dbs.password} 
+${adv.database.setPassword('password')}
+${adv.database.password} 
 </#noparse>
 
 	|||
@@ -180,16 +180,16 @@ ${dbs.password}
 ====================
 4. password RESULT
 ====================
-${dbs.setPassword('password')}
-${dbs.password} 
+${adv.database.setPassword('password')}
+${adv.database.password} 
 
     
 ===================
 5. profileName Expression or Script
 ====================                                                                                  
 <#noparse>
-${dbs.setProfileName('profileName')}
-${dbs.profileName} 
+${adv.database.setProfileName('profileName')}
+${adv.database.profileName} 
 </#noparse>
 
 	|||
@@ -197,16 +197,16 @@ ${dbs.profileName}
 ====================
 5. profileName RESULT
 ====================
-${dbs.setProfileName('profileName')}
-${dbs.profileName} 
+${adv.database.setProfileName('profileName')}
+${adv.database.profileName} 
 
   
 ===================
 6. schema Expression or Script
 ====================                                                                                  
 <#noparse>
-${dbs.setSchema('schema')}
-${dbs.schema} 
+${adv.database.setSchema('schema')}
+${adv.database.schema} 
 </#noparse>
 
 	|||
@@ -214,16 +214,16 @@ ${dbs.schema}
 ====================
 6. schema RESULT
 ====================
-${dbs.setSchema('schema')}
-${dbs.schema}  
+${adv.database.setSchema('schema')}
+${adv.database.schema}  
 
  
 ===================
 7. tablePattern Expression or Script
 ====================                                                                                  
 <#noparse>
-${dbs.setTablePattern('tablePattern')}
-${dbs.tablePattern} 
+${adv.database.setTablePattern('tablePattern')}
+${adv.database.tablePattern} 
 </#noparse>
 
 	|||
@@ -231,15 +231,15 @@ ${dbs.tablePattern}
 ====================
 7. tablePattern RESULT
 ====================
-${dbs.setTablePattern('tablePattern')}
-${dbs.tablePattern} 
+${adv.database.setTablePattern('tablePattern')}
+${adv.database.tablePattern} 
 
 ===================
 8. tableType Expression or Script
 ====================                                                                                  
 <#noparse>
-${dbs.setTableType('tableType')}
-${dbs.tableType} 
+${adv.database.setTableType('tableType')}
+${adv.database.tableType} 
 </#noparse>
 
 	|||
@@ -247,8 +247,8 @@ ${dbs.tableType}
 ====================
 8. tableType RESULT
 ====================
-${dbs.setTableType('tableType')}
-${dbs.tableType} 
+${adv.database.setTableType('tableType')}
+${adv.database.tableType} 
 
 IF YOU WANT TO TRY REMOVE THIS LINE COMMENTS -->
 
@@ -259,37 +259,38 @@ C. NOT USED Database - Factor Subroutines --------------------------------------
 =====================================================================================================================
 Expression or Script   										-> RESULT
 =====================================================================================================================
-${dbs.profileConnector}
-${dbs.addPropertyChangeListener(null)}
-${dbs.addValueModifyListener(null)}
-${dbs.do('firmansyah')}
-${dbs.propertyChange(null)}
-${dbs.removePropertyChangeListener(null)} 
-
+<#noparse>`
+${adv.database.profileConnector}
+${adv.database.addPropertyChangeListener(null)}
+${adv.database.addValueModifyListener(null)}
+${adv.database.do('firmansyah')}
+${adv.database.propertyChange(null)}
+${adv.database.removePropertyChangeListener(null)} 
+</#noparse>
 
 
 =====================================================================================================================
 D. AI Prompts - Factor Subroutines ---------------------------------------------------------------------------
 =====================================================================================================================
-Here is a **concise summary** of the FreeMarker Data Model for `dbs` (Database object), formatted for easy use in prompts to other AIs or developers:
+Here is a **concise summary** of the FreeMarker Data Model for `adv.database` (Database object), formatted for easy use in prompts to other AIs or developers:
 
 ---
 
-### ✅ **FreeMarker Database Data Model Summary (`dbs`)**
+### ✅ **FreeMarker Database Data Model Summary (`adv.database`)**
 
 #### 🔹 **Collection Fields (Iterable Lists)**
 
-Each can be iterated using `<#list>` in FreeMarker templates:
+Each can be iterated using <#noparse>`<#list>`</#noparse> in FreeMarker templates:
 
-* `dbs.catalogs` → list of catalogs
-* `dbs.schemas` → list of schemas
-* `dbs.tableTypes` → list of table types
-* `dbs.tableTypesList` → another list of table types
+* `adv.database.catalogs` → list of catalogs
+* `adv.database.schemas` → list of schemas
+* `adv.database.tableTypes` → list of table types
+* `adv.database.tableTypesList` → another list of table types
 
 **Usage:**
 
 ```ftl
-<#list dbs.catalogs as i>
+<#list adv.database.catalogs as i>
   ${i?counter}: ${i}
 </#list>
 ```
@@ -301,18 +302,18 @@ Each can be iterated using `<#list>` in FreeMarker templates:
 These are simple property reads:
 
 ```ftl
-${dbs.catalog}
-${dbs.create?c}
-${dbs.driverClassName}
-${dbs.driverFile}
-${dbs.name}
-${dbs.password}
-${dbs.profileName}
-${dbs.schema}
-${dbs.tablePattern}
-${dbs.tableType}
-${dbs.url}
-${dbs.user}
+${adv.database.catalog}
+${adv.database.create?c}
+${adv.database.driverClassName}
+${adv.database.driverFile}
+${adv.database.name}
+${adv.database.password}
+${adv.database.profileName}
+${adv.database.schema}
+${adv.database.tablePattern}
+${adv.database.tableType}
+${adv.database.url}
+${adv.database.user}
 ```
 
 ---
@@ -323,22 +324,22 @@ These can be used to override values from within `.ftl` templates:
 
 | Property       | Setter Example                         | Usage Output          |
 | -------------- | -------------------------------------- | --------------------- |
-| `catalog`      | `${dbs.setCatalog('catalog')}`         | `${dbs.catalog}`      |
-| `create`       | `${dbs.setCreate(true)}`               | `${dbs.create?c}`     |
-| `name`         | `${dbs.setName('name')}`               | `${dbs.name}`         |
-| `password`     | `${dbs.setPassword('password')}`       | `${dbs.password}`     |
-| `profileName`  | `${dbs.setProfileName('profileName')}` | `${dbs.profileName}`  |
-| `schema`       | `${dbs.setSchema('schema')}`           | `${dbs.schema}`       |
-| `tablePattern` | `${dbs.setTablePattern('pattern')}`    | `${dbs.tablePattern}` |
-| `tableType`    | `${dbs.setTableType('type')}`          | `${dbs.tableType}`    |
+| `catalog`      | `${adv.database.setCatalog('catalog')}`         | `${adv.database.catalog}`      |
+| `create`       | `${adv.database.setCreate(true)}`               | `${adv.database.create?c}`     |
+| `name`         | `${adv.database.setName('name')}`               | `${adv.database.name}`         |
+| `password`     | `${adv.database.setPassword('password')}`       | `${adv.database.password}`     |
+| `profileName`  | `${adv.database.setProfileName('profileName')}` | `${adv.database.profileName}`  |
+| `schema`       | `${adv.database.setSchema('schema')}`           | `${adv.database.schema}`       |
+| `tablePattern` | `${adv.database.setTablePattern('pattern')}`    | `${adv.database.tablePattern}` |
+| `tableType`    | `${adv.database.setTableType('type')}`          | `${adv.database.tableType}`    |
 
 ---
 
 ### 🔍 **Usage Context**
 
-* You pass a `dbs` Java object into FreeMarker as part of the data model.
+* You pass a `adv.database` Java object into FreeMarker as part of the data model.
 * The template accesses fields or modifies them using getters/setters.
-* Lists are rendered with `<#list>`, and individual values use `${}` syntax.
+* Lists are rendered with <#noparse>`<#list>`</#noparse>, and individual values use <#noparse>`${}`</#noparse> syntax.
 * Setters are usually discouraged in pure presentation logic but can be used for quick override scenarios.
 
 ---

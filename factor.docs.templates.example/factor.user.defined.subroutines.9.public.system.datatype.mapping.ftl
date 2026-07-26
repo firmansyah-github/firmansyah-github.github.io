@@ -133,7 +133,7 @@ This logic defines how to map database types to programming language types (e.g.
 #### 🔹 **Mapping Syntax**
 
 ```freemarker
-${PUB_SYS_DTM@<DB_DT_TYPE>|<PL_DT_TYPE>|<Description>}
+<#noparse>${PUB_SYS_DTM@<DB_DT_TYPE>|<PL_DT_TYPE>|<Description>}</#noparse>
 ```
 
 * `DB_DT_TYPE` = source DB type (e.g., `integer`, `text`)
@@ -173,12 +173,14 @@ ${PUB_SYS_DTM@<DB_DT_TYPE>|<PL_DT_TYPE>|<Description>}
 Iterating over entity fields and accessing their mapped types:
 
 ```freemarker
+<#noparse>
 <#list adv.entities as i>
   ${i.tableName}
   <#list i.fieldList as k>
     ${k.fieldType} - ${k.fieldName} - ${k.columnType} - ${k.columnName}
   </#list>
 </#list>
+</#noparse>
 ```
 
 ---

@@ -54,7 +54,7 @@ This data model controls how files are generated based on metadata embedded in t
 
 Each variable has:
 
-* **Name**: used in the template as `${VAR_NAME}`
+* **Name**: used in the template as <#noparse>`${VAR_NAME}`</#noparse>
 * **Value**: used in rendering
 * **Description**: human-readable purpose
 

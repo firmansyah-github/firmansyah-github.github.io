@@ -95,7 +95,7 @@ The `adv` object contains the following nested structures:
 #### 🔹 `adv.fileDefaultAttrs`
 
 * **Type:** Map (or Hash)
-* **Usage:** Iterate with `<#list adv.fileDefaultAttrs as k, v>`
+* **Usage:** Iterate with <#noparse>`<#list adv.fileDefaultAttrs as k, v>`</#noparse>
 * **Example Output:**
 
   ```
@@ -148,9 +148,9 @@ The `adv` object contains the following nested structures:
 
 ### 📌 Notes for AI usage
 
-* `${var?c}`: Coerces Boolean to `true/false` string.
-* `${var!''}`: Null-safe fallback to empty string.
-* `${k.name}`: Standard variable access for fields.
+* <#noparse>`${var?c}`</#noparse>: Coerces Boolean to `true/false` string.
+* <#noparse>`${var!''}`</#noparse>: Null-safe fallback to empty string.
+* <#noparse>`${k.name}`</#noparse>: Standard variable access for fields.
 
 ---
 

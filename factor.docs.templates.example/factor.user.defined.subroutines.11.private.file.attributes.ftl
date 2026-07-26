@@ -60,7 +60,7 @@ Here’s a concise summary of your FreeMarker data model description, ready to p
 
 * **Private (File) Attributes**
 
-  * Use a naming pattern starting with `PRV_` prefix, e.g., `${PRV_XXXXX|VALUE|Description}`.
+  * Use a naming pattern starting with `PRV_` prefix, e.g., <#noparse>`${PRV_XXXXX|VALUE|Description}`</#noparse>.
   * `XXXXX` is customizable; `VALUE` is the attribute’s value; `Description` is optional documentation.
   * These private attributes can appear in multiple template files, each file can have its own values.
   * Attribute values can be overridden centrally in a "Private (File) Attributes" table, which takes precedence over file-defined values.
